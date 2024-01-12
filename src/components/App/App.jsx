@@ -3,7 +3,7 @@ import React from 'react';
 const App = () => {
     return (
         <h1>
-            First projects
+            First project
         </h1>
     )
 }
