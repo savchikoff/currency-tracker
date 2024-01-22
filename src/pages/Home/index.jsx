@@ -1,6 +1,11 @@
+import Currencies from "@components/Currencies";
 
 const Home = () => {
-	return <div>Home</div>;
+	return (
+		<>
+			<Currencies />
+		</>
+	)
 };
 
 export default Home;

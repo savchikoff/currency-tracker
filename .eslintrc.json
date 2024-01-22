@@ -20,6 +20,14 @@
 			{
 				"devDependencies": true
 			}
+		],
+		"import/no-unresolved": [
+			"error",
+			{
+				"ignore": [
+					"\\.svg"
+				]
+			}
 		]
 	}
 }

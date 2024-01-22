@@ -40,7 +40,7 @@ export const LastUpdatedDotInner = styled.div`
     transform: translate(-50%, -50%);
 `;
 
-export const LastUpdatedInfo = styled.div`
+export const LastUpdatedInfo = styled.span`
     font-size: 32px;
     font-weight: 300;
 `;
