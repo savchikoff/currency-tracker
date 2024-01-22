@@ -17,7 +17,8 @@ module.exports = {
             '@pages': path.resolve(__dirname, 'src/pages'),
             '@assets': path.resolve(__dirname, 'src/assets'),
             '@constants': path.resolve(__dirname, 'src/constants'),
-            '@utils': path.resolve(__dirname, 'src/utils')
+            '@utils': path.resolve(__dirname, 'src/utils'),
+            '@hooks': path.resolve(__dirname, 'src/hooks')
         },
     },
     module: {
