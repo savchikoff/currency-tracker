@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { CardContainer, CardWrapper, CardImage, CardTextContent, CardHeader, CardValue } from "./styled"
 
 const CurrencyCard = ({ name, img, alt, value }) => {
@@ -12,6 +13,13 @@ const CurrencyCard = ({ name, img, alt, value }) => {
             </CardWrapper>
         </CardContainer>
     )
+}
+
+CurrencyCard.propTypes = {
+    name: PropTypes.string,
+    img: PropTypes.string,
+    alt: PropTypes.string,
+    value: PropTypes.string
 }
 
 export default CurrencyCard;
