@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
 
 import AppLayout from "../AppLayout";
 
@@ -10,7 +10,7 @@ import BankCard from "../../pages/BankCard";
 
 const Router = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route element={<AppLayout />}>
                     <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ const Router = () => {
                     <Route path="/contacts" element={<Contacts />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 

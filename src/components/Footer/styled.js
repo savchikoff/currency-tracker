@@ -14,6 +14,7 @@ export const FooterWrapper = styled.div`
 
 export const FooterNavigation = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: 120px;
 `
 
