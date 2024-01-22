@@ -22,6 +22,11 @@ const GlobalStyle = createGlobalStyle`
   dd {
     margin: 0;
   } 
+
+  .root{
+    margin: 0 auto;
+
+  }
 `;
 
 export const Container = styled.div`

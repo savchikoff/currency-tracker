@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+    background: linear-gradient(253deg, #121212 11.77%, rgba(36, 121, 64, 0.00) 91.12%);
+`
+
+export const HeaderWrapper = styled.div`
     display: flex;
     gap: 90px;
     padding: 0 121px;
     padding-top: 33px;
     padding-bottom: 59px;
-    background: linear-gradient(253deg, #121212 11.77%, rgba(36, 121, 64, 0.00) 91.12%);
 `
 
 export const HeaderTextContainer = styled.div`
@@ -28,3 +31,5 @@ export const HeaderText = styled.p`
     font-size: 25px;
     font-weight: 300;
 `
+
+export const HeaderImage = styled.img``;

@@ -1,12 +1,11 @@
-import React from 'react';
-import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 
-import AppLayout from "../AppLayout";
+import AppLayout from "@components/AppLayout";
 
-import Home from "../../pages/Home";
-import Timeline from "../../pages/Timeline";
-import Contacts from "../../pages/Contacts";
-import BankCard from "../../pages/BankCard";
+import Home from "@pages/Home";
+import Timeline from "@pages/Timeline";
+import Contacts from "@pages/Contacts";
+import BankCard from "@pages/BankCard";
 
 const Router = () => {
     return (
