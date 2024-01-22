@@ -6,6 +6,7 @@ import Home from "@pages/Home";
 import Timeline from "@pages/Timeline";
 import Contacts from "@pages/Contacts";
 import BankCard from "@pages/BankCard";
+import ErrorPage from "@pages/Error";
 
 const Router = () => {
     return (
@@ -16,6 +17,7 @@ const Router = () => {
                     <Route path="/timeline" element={<Timeline />} />
                     <Route path="/bank-card" element={<BankCard />} />
                     <Route path="/contacts" element={<Contacts />} />
+                    <Route path="*" element={<ErrorPage />} />
                 </Route>
             </Routes>
         </HashRouter>
