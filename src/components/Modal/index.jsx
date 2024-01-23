@@ -1,11 +1,11 @@
-import { useRef, useEffect, memo } from "react";
+import { useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Background, Wrapper, HeaderRow, ScrollDisabler, Content, AmountInput, ChosenCurrencyContainer, ChosenCurrencyWrapper, ChosenCurrencyImage, ChosenCurrencyName } from "./styled";
+import { Background, Wrapper, HeaderRow, ScrollDisabler, Content } from "./styled";
 import closeIcon from "@assets/icons/close.svg";
 
 const portalRoot = document.getElementById("portal-root");
 
-const Modal = ({ isOpen, close }) => {
+const Modal = ({ isOpen, close, children }) => {
     const ref = useRef();
 
     useEffect(() => {
@@ -36,15 +36,7 @@ const Modal = ({ isOpen, close }) => {
                         />
                     </HeaderRow>
                     <Content>
-                        <AmountInput />
-                        <ChosenCurrencyContainer>
-                            <ChosenCurrencyWrapper>
-                                <ChosenCurrencyImage />
-                                <ChosenCurrencyName>
-                                    USD
-                                </ChosenCurrencyName>
-                            </ChosenCurrencyWrapper>
-                        </ChosenCurrencyContainer>
+                        {children}
                     </Content>
                 </Wrapper>
             </Background>
