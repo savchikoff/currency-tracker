@@ -1,8 +1,14 @@
+import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { CurrencySectionCards, CurrencySectionContainer, CurrencySectionHeader } from './styled';
 import CurrencyCard from '@components/Currencies/CurrencyCard';
+import { formatCurrencies } from '@utils/formatting';
 
-const CurrencySection = ({ header, cards, onClick }) => {
+const CurrencySection = ({ header, cards, currencies, onClick }) => {
+
+    const formattedCurrencyRates = useMemo(() => {
+        return cards.map(({ id, value }) => formatCurrencies(currencies, id, value));
+    }, [cards, currencies]);
 
     return (
         <>
@@ -10,7 +16,7 @@ const CurrencySection = ({ header, cards, onClick }) => {
                 <CurrencySectionHeader>{header}</CurrencySectionHeader>
                 <CurrencySectionCards>
                     {cards.map(({ id, img, title }, index) => (
-                        <CurrencyCard key={title} name={title} img={img} alt={title} value={index} handleCardClick={onClick} />
+                        <CurrencyCard key={title} name={title} img={img} alt={title} value={formattedCurrencyRates[index]} handleCardClick={onClick} />
                     ))}
                 </CurrencySectionCards>
             </CurrencySectionContainer>

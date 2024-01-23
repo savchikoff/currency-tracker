@@ -1,6 +1,6 @@
 const CURRENCY_DATA = {
     "meta": {
-        "last_updated_at": "2024-01-22T23:59:59Z"
+        "last_updated_at": "2024-01-20T23:59:59Z"
     },
     "data": {
         "ARS": {

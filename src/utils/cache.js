@@ -1,11 +1,12 @@
 import CACHE_LIFETIIME from "@constants/cache";
+import CURRENCY_DATA from "@components/Currencies/mockData";
 
 const readFromCache = (key) => {
     const storage = localStorage.getItem(key);
     if (storage) {
         return JSON.parse(storage);
     }
-    return {};
+    return CURRENCY_DATA;
 }
 
 const writeToCache = (key, data) => {

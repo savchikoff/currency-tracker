@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 
 import { LastUpdatedContainer, LastUpdatedDotInner, LastUpdatedDotOuter, LastUpdatedInfo } from './styled';
+import { getCachedData } from '@utils/request';
+import { formatDate } from '@utils/formatting';
 
-const LastUpdated = ({ time = "Last updated at 11:59pm" }) => {
+const LastUpdated = () => {
+    const cachedData = getCachedData();
+    const lastUpdate = cachedData ? formatDate(cachedData.meta["last_updated_at"]) : "no information";
+    console.log(cachedData);
+
     return (
         <LastUpdatedContainer>
             <LastUpdatedDotOuter>
                 <LastUpdatedDotInner />
             </LastUpdatedDotOuter>
-            <LastUpdatedInfo>{time}</LastUpdatedInfo>
+            <LastUpdatedInfo>Last updated {lastUpdate}</LastUpdatedInfo>
         </LastUpdatedContainer>
     )
-}
-
-LastUpdated.propTypes = {
-    time: PropTypes.string.isRequired
 }
 
 export default LastUpdated;

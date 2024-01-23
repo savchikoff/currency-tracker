@@ -26,7 +26,8 @@
 			{
 				"ignore": [
 					"\\.svg",
-					"^@constants/.+"
+					"^@constants/.+",
+					"^@components/Currencies/.+"
 				]
 			}
 		]

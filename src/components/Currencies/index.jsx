@@ -7,15 +7,14 @@ import CurrencyConvertorModal from "@components/Currencies/CurrencyConvertorModa
 import { QUOTES_DATA, STOCKS_DATA } from "@constants/currencies";
 import { getNewData, getCachedData } from '@utils/request';
 import { isCacheValid } from '@utils/cache';
-import CURRENCY_DATA from "./mockData";
 
 const Currencies = () => {
 
     const [isOpen, setOpen] = useState(false);
 
-    const [currencies, setCurrencies] = useState(CURRENCY_DATA);
-
-    const useCache = true;
+    const [currencies, setCurrencies] = useState(getCachedData);
+    const [amount, setAmount] = useState("");
+    const [targetCurrency, setTargetCurrency] = useState();
 
     const getCurrencies = async () => {
         if (isCacheValid(currencies)) {
@@ -24,7 +23,7 @@ const Currencies = () => {
                 setCurrencies(cachedCurrencies);
             }
         } else {
-            const freshCurrencies = await getNewData(useCache);
+            const freshCurrencies = await getNewData(true);
             setCurrencies(freshCurrencies);
         }
     }
