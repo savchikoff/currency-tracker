@@ -25,7 +25,8 @@
 			"error",
 			{
 				"ignore": [
-					"\\.svg"
+					"\\.svg",
+					"^@constants/.+"
 				]
 			}
 		]
