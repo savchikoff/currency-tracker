@@ -15,9 +15,9 @@ export const formatDate = (date) => {
 
 export const formatCurrencies = (currencies, id, value) => {
     if (currencies?.data?.[id]) {
-        const currencyValue = `$${Number(currencies.data[id].value.toFixed(3))}`;
+        const currencyValue = `$${Number(currencies.data[id].value.toFixed(6))}`;
         return currencyValue;
-    } 
-        return value || "Not found";
-    
+    }
+    return value || "Not found";
+
 }

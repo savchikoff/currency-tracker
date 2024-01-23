@@ -4,7 +4,7 @@ import { CurrencySectionCards, CurrencySectionContainer, CurrencySectionHeader }
 import CurrencyCard from '@components/Currencies/CurrencyCard';
 import { formatCurrencies } from '@utils/formatting';
 
-const CurrencySection = ({ header, cards, currencies, onClick }) => {
+const CurrencySection = ({ header, cards, currencies, handleConvertorModalOpen, isClickable }) => {
 
     const formattedCurrencyRates = useMemo(() => {
         return cards.map(({ id, value }) => formatCurrencies(currencies, id, value));
@@ -16,7 +16,7 @@ const CurrencySection = ({ header, cards, currencies, onClick }) => {
                 <CurrencySectionHeader>{header}</CurrencySectionHeader>
                 <CurrencySectionCards>
                     {cards.map(({ id, img, title }, index) => (
-                        <CurrencyCard key={title} name={title} img={img} alt={title} value={formattedCurrencyRates[index]} handleCardClick={onClick} />
+                        <CurrencyCard key={title} name={title} img={img} alt={title} value={formattedCurrencyRates[index]} handleCardClick={isClickable ? () => handleConvertorModalOpen(id, img) : undefined} />
                     ))}
                 </CurrencySectionCards>
             </CurrencySectionContainer>

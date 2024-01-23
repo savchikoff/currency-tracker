@@ -27,7 +27,7 @@ export const CurrenciesContainer = styled.div`
   gap: 20px;
 `
 
-export const Title = styled.div`
+export const Label = styled.div`
   font-weight: 300px;
 `
 
@@ -48,9 +48,43 @@ export const CurrencyContainer = styled.div`
 export const CurrencyWrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 8px;
 `;
 
-export const CurrencyImage = styled.img``;
+export const CurrencyImage = styled.img`
+  width: 30px;
+  height: 30px;
+`;
 export const CurrencyName = styled.span`
 
 `;
+
+export const ConvertedAmount = styled.span`
+  font-weight: 600;
+`;
+
+export const ConvertButton = styled.button`
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  padding: 16px 32px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #00CE2C;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #00CE2C;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #00CE2C;
+
+  &:hover {
+    color: #FFFFFF;
+    box-shadow: inset 0 -100px 0 0 #00CE2C;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+`

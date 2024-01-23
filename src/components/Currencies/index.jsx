@@ -4,19 +4,20 @@ import CurrencySection from "./CurrencySection";
 import CurrenciesContainer from "./styled";
 import CurrencyConvertorModal from "@components/Currencies/CurrencyConvertorModal";
 
-import { QUOTES_DATA, STOCKS_DATA } from "@constants/currencies";
+import { QUOTES_DATA, STOCKS_DATA, BASE_CURRENCY } from "@constants/currencies";
 import { getNewData, getCachedData } from '@utils/request';
 import { isCacheValid } from '@utils/cache';
 
 const Currencies = () => {
 
-    const [isOpen, setOpen] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(false);
 
     const [currencies, setCurrencies] = useState(getCachedData);
-    const [amount, setAmount] = useState("");
-    const [targetCurrency, setTargetCurrency] = useState();
+    const [amount, setAmount] = useState(0);
+    const [chosenCurrency, setChosenCurrency] = useState(BASE_CURRENCY);
 
-    const getCurrencies = async () => {
+
+    const getCurrenciesRates = async () => {
         if (isCacheValid(currencies)) {
             const cachedCurrencies = getCachedData();
             if (cachedCurrencies) {
@@ -29,25 +30,25 @@ const Currencies = () => {
     }
 
     useEffect(() => {
-        getCurrencies();
+        getCurrenciesRates();
     }, [])
 
-    const handleOpenModal = () => {
-        setOpen(true);
+    const handleConvertorModalOpen = (id, img) => {
+        setModalOpen(true);
+        setChosenCurrency({ id, img });
     }
 
-    const handleCloseModal = () => {
-        setOpen(false);
+    const handleConvertorModalClose = () => {
+        setModalOpen(false);
     }
-
 
     return (
         <>
             <CurrenciesContainer>
-                <CurrencySection header={"Stocks"} cards={STOCKS_DATA} />
-                <CurrencySection header={"Quotes"} cards={QUOTES_DATA} currencies={currencies} onClick={handleOpenModal} />
+                <CurrencySection header={"Stocks"} cards={STOCKS_DATA} isClickable={false} />
+                <CurrencySection header={"Quotes"} cards={QUOTES_DATA} currencies={currencies} isClickable={true} handleConvertorModalOpen={handleConvertorModalOpen} />
             </CurrenciesContainer>
-            <CurrencyConvertorModal isOpen={isOpen} close={handleCloseModal} />
+            <CurrencyConvertorModal isOpen={isModalOpen} close={handleConvertorModalClose} chosenCurrency={chosenCurrency} amount={amount} setAmount={setAmount} currencies={currencies} />
         </>
     )
 }

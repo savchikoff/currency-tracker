@@ -19,7 +19,7 @@ CurrencyCard.propTypes = {
     name: PropTypes.string,
     img: PropTypes.string,
     alt: PropTypes.string,
-    value: PropTypes.number,
+    value: PropTypes.string,
     handleCardClick: PropTypes.func
 }
 

@@ -24,6 +24,11 @@ export const STOCKS_DATA = [
     }
 ];
 
+export const BASE_CURRENCY = {
+    id: "USD",
+    img: dollar
+}
+
 export const QUOTES_DATA = [
     {
         id: "USD",

@@ -7,7 +7,6 @@ import { formatDate } from '@utils/formatting';
 const LastUpdated = () => {
     const cachedData = getCachedData();
     const lastUpdate = cachedData ? formatDate(cachedData.meta["last_updated_at"]) : "no information";
-    console.log(cachedData);
 
     return (
         <LastUpdatedContainer>
