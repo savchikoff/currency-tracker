@@ -20,16 +20,18 @@
 			{
 				"devDependencies": true
 			}
-		],
-		"import/no-unresolved": [
-			"error",
-			{
-				"ignore": [
-					"\\.svg",
-					"^@constants/.+",
-					"^@components/Currencies/.+"
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"alias": {
+				"map": [
+					[
+						"@",
+						"path.resolve(__dirname, 'src')"
+					]
 				]
 			}
-		]
+		}
 	}
 }

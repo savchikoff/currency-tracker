@@ -10,6 +10,14 @@ export default class ChartChangeModal extends Component {
                 <ModalContainer>
                     <ModalWrapper>
                         <InputContainer>
+                            <InputLabel>Date for change</InputLabel>
+                            <SelectInput>
+                                <option>Hello</option>
+                                <option>Heyyy</option>
+                                <option>Hey</option>
+                            </SelectInput>
+                        </InputContainer>
+                        <InputContainer>
                             <InputLabel>Open</InputLabel>
                             <TextInput />
                         </InputContainer>

@@ -9,5 +9,5 @@ export const TimelineContainer = styled.div`
 export const SelectsWrapper = styled.div`
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
 `

@@ -41,10 +41,10 @@ export const TextInput = styled.input`
 `
 
 export const SelectInput = styled.select`
-font-family: inherit;
+    font-family: inherit;
     font-size: 35px;
+    width: 100%;
     font-weight: 300;
-    width: 50%;
     border: none;
     border-bottom: 2px solid #474747;
     outline: 0;
@@ -59,5 +59,8 @@ font-family: inherit;
         border-width: 3px;
         border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
         border-image-slice: 1;
+    }
+    option{
+        color: #030304;
     }
 `
