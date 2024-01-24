@@ -13,7 +13,7 @@ const Currencies = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const [currencies, setCurrencies] = useState(getCachedData);
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState("");
     const [chosenCurrency, setChosenCurrency] = useState(BASE_CURRENCY);
 
 

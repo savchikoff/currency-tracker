@@ -28,7 +28,9 @@ const CurrencySection = ({ header, cards, currencies, handleConvertorModalOpen, 
 CurrencySection.propTypes = {
     header: PropTypes.string,
     cards: PropTypes.array,
-    handleOpenModal: PropTypes.func
+    currencies: PropTypes.object,
+    handleConvertorModalOpen: PropTypes.func,
+    isClickable: PropTypes.bool
 }
 
 export default CurrencySection;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import { Main, DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, CurrencyImage, CurrencyName, ListItem } from "./styled"
 
@@ -45,6 +46,13 @@ const Select = ({ targetCurrency, chosenCurrency, setTargetCurrency, setConverte
             </DropDownContainer>
         </Main >
     );
+}
+
+Select.propTypes = {
+    targetCurrency: PropTypes.object,
+    chosenCurrency: PropTypes.object,
+    setTargetCurrency: PropTypes.func,
+    setConvertedAmount: PropTypes.func
 }
 
 export default Select;
