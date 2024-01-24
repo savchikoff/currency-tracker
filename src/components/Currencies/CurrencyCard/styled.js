@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    min-width: 520px;
     color: #FFFFFF;
     background-color: #202025;
     border: 1px solid #474747;

@@ -1,4 +1,4 @@
-import { HeaderContainer, HeaderWrapper, HeaderTextContainer, HeaderTitle, HeaderImage } from './styled';
+import { HeaderContainer, HeaderWrapper, HeaderTextContainer, HeaderTitle, HeaderImage, HeaderText } from './styled';
 import { Container } from '../../styled';
 import diagram from "@assets/diagram.svg"
 
@@ -9,9 +9,9 @@ const Header = () => {
                 <HeaderWrapper>
                     <HeaderTextContainer>
                         <HeaderTitle>
-                            Modsen Currency <br />Tracker
+                            Modsen Currency <br /> Tracker
                         </HeaderTitle>
-                        <p>Quotes for the dollar and other <br />international currencies.</p>
+                        <HeaderText>Quotes for the dollar and other<br /> international currencies.</HeaderText>
                     </HeaderTextContainer>
                     <HeaderImage src={diagram} alt="Currency Diagram" />
                 </HeaderWrapper>
