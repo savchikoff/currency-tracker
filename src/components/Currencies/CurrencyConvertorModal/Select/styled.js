@@ -29,11 +29,22 @@ export const CurrencyName = styled.span``
 export const DropDownListContainer = styled.div`
     position: absolute;
     z-index: 1;
+    margin-top: 8px;
 `;
 
 export const DropDownList = styled.ul`
   padding: 0;
   background: #202025;
+  max-height: 200px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
   border: 1px solid #474747;
   box-sizing: border-box;
   border-radius: 8px;
