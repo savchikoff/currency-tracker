@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
+import CurrenciesTimeline from '../../components/CurrenciesTimeline';
 
 export default class Timeline extends Component {
 	render() {
-		return <div>Timeline</div>;
+		return <CurrenciesTimeline />;
 	}
 }
