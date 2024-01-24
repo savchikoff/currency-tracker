@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { AmountInput, Label, CurrencyContainer, CurrencyWrapper, CurrencyImage, CurrencyName, CurrentCurrency, ConvertibleCurrency, CurrenciesContainer, ConvertButton, ConvertedAmount } from "./styled"
+import { AmountInput, Label, CurrencyContainer, CurrencyWrapper, CurrencyImage, CurrencyName, CurrentCurrency, ConvertibleCurrency, CurrenciesContainer, ConvertedAmount } from "./styled"
+import Button from '@components/Button'
 
 import Modal from "@components/Modal";
 
@@ -50,7 +51,7 @@ const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmou
                 </ConvertibleCurrency>
             </CurrenciesContainer>
             <ConvertedAmount>Converted amount: {convertedAmount} {targetCurrency.id}</ConvertedAmount>
-            <ConvertButton onClick={handleConvert}>Convert</ConvertButton>
+            <Button onClick={handleConvert}>Convert</Button>
         </Modal>
     )
 }

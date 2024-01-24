@@ -6,7 +6,9 @@ export const SelectContainer = styled.div`
 
 export const SelectWrapper = styled.div`
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
 `;
 
 export const StartDateSelect = styled.div`

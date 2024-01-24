@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-const TimelineContainer = styled.div`
+export const TimelineContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 48px;
-`
+`;
 
-export default TimelineContainer;
+export const SelectsWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+`

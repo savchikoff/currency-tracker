@@ -15,7 +15,7 @@ export const Background = styled.div`
 export const Wrapper = styled.div`
   background-color: #202025;
   border: 1px solid #474747;
-  width: 350px;
+  min-width: 300px;
   padding: 32px;
   border-radius: 8px;
   max-width: 90%;
