@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import { AmountInput, Label, CurrencyContainer, CurrencyWrapper, CurrencyImage, CurrencyName, CurrentCurrency, ConvertibleCurrency, CurrenciesContainer, ConvertButton, ConvertedAmount } from "./styled"
@@ -12,12 +12,16 @@ import Select from "./Select";
 const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmount, currencies }) => {
     const { id: chosenCurrencyName, img } = chosenCurrency;
 
-    const [convertedAmount, setConvertedAmount] = useState("");
+    const [convertedAmount, setConvertedAmount] = useState(0);
     const [targetCurrency, setTargetCurrency] = useState(BASE_CURRENCY);
+
+    useEffect(() => {
+        setConvertedAmount(0);
+    }, [chosenCurrency])
 
 
     const handleChangeAmount = (e) => {
-        setAmount(e.target.value);
+        setAmount(Number(e.target.value));
     };
 
     const handleConvert = () => {
@@ -55,7 +59,7 @@ CurrencyConvertorModal.propTypes = {
     isOpen: PropTypes.bool,
     close: PropTypes.func,
     chosenCurrency: PropTypes.object,
-    amount: PropTypes.string,
+    amount: PropTypes.number,
     setAmount: PropTypes.func,
     currencies: PropTypes.object
 

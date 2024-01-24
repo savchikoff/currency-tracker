@@ -13,7 +13,7 @@ const Currencies = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const [currencies, setCurrencies] = useState(getCachedData);
-    const [amount, setAmount] = useState("");
+    const [amount, setAmount] = useState(0);
     const [chosenCurrency, setChosenCurrency] = useState(BASE_CURRENCY);
 
 
@@ -36,6 +36,7 @@ const Currencies = () => {
     const handleConvertorModalOpen = (id, img) => {
         setModalOpen(true);
         setChosenCurrency({ id, img });
+        setAmount(0);
     }
 
     const handleConvertorModalClose = () => {
