@@ -42,7 +42,7 @@ export default class Map extends PureComponent {
         const { banks } = this.props;
         banks.forEach(bank => {
             const popUp = new mapboxgl.Popup({ offset: 25 })
-                .setHTML(`<h3>${bank.name}</h3><p>${bank.address}</p>`);
+                .setHTML(`<h3>${bank.name}</h3><p>${bank.address}</p><p>Available currencies: <br> ${bank.currencies.join(", ")}</p > `);
             const marker = new mapboxgl.Marker()
                 .setLngLat([bank.lng, bank.lat])
                 .setPopup(popUp)
