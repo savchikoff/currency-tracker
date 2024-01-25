@@ -6,8 +6,9 @@ export const TimelineContainer = styled.div`
     gap: 48px;
 `;
 
-export const SelectsWrapper = styled.div`
+export const UpdateWrapper = styled.div`
     display: flex;
     align-items: center;
+    min-height: 56px;
     gap: 32px;
 `

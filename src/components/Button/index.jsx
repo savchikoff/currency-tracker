@@ -1,8 +1,8 @@
 import ButtonComponent from "./styled";
 
-const Button = ({ onClick, children }) => {
+const Button = ({ onClick, children, isButtonDisabled }) => {
     return (
-        <ButtonComponent onClick={onClick}>{children}</ButtonComponent>
+        <ButtonComponent onClick={onClick} disabled={isButtonDisabled}>{children}</ButtonComponent>
     )
 }
 

@@ -1,6 +1,8 @@
 import { Component } from "react";
 import Chart from "react-apexcharts";
 
+import CANDLESTICK_OPTIONS from './config'
+
 
 class CurrenciesChart extends Component {
     constructor(props) {
@@ -11,23 +13,7 @@ class CurrenciesChart extends Component {
             series: [{
                 data: []
             }],
-            options: {
-                chart: {
-                    type: 'candlestick',
-                    height: 350
-                },
-                xaxis: {
-                    type: 'datetime',
-                    labels: {
-                        format: 'dd/MM'
-                    }
-                },
-                yaxis: {
-                    tooltip: {
-                        enabled: true
-                    }
-                }
-            }
+            options: CANDLESTICK_OPTIONS
         };
     }
 
@@ -39,9 +25,21 @@ class CurrenciesChart extends Component {
         })
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.data !== this.props.data) {
+            this.setState({
+                series: [{
+                    data: this.props.data
+                }]
+            })
+        }
+    }
+
     render() {
+        const { data } = this.props;
+        const isDataEmpty = !!data.length;
         return (
-            <Chart
+            isDataEmpty && <Chart
                 options={this.state.options}
                 series={this.state.series}
                 type="candlestick"
