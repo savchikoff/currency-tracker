@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import Modal from "@components/Modal";
 
-import { ModalContainer, InputContainer, InputLabel, TextInput, SelectInput, ModalWrapper } from './styled';
+import { ModalContainer, InputContainer, InputLabel, TextInput, SelectInput, Option, ModalWrapper } from './styled';
 import Button from '../../Button';
 
 export default class ChartChangeModal extends Component {
@@ -66,7 +66,7 @@ export default class ChartChangeModal extends Component {
                             <SelectInput onChange={this.handleSelectChange} value={this.state.selectedDate}>
                                 {this.props.data.map(({ x }) => {
                                     const stringDate = x.toDateString();
-                                    return <option key={stringDate} value={+x}>{stringDate}</option>
+                                    return <Option key={stringDate} value={+x}>{stringDate}</Option>
                                 })}
                             </SelectInput>
                         </InputContainer>

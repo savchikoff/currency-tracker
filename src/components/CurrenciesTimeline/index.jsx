@@ -4,13 +4,16 @@ import CurrenciesChart from "./CurrenciesChart";
 import CurrenciesTabs from './CurrenciesTabs';
 import TimelineDatePicker from './TimelineDatePicker';
 import ChartChangeModal from './ChartChangeModal';
+import Button from "@components/Button";
 
 import { BASE_CURRENCY, QUOTES_DATA } from '@constants/currencies';
 
 import { TimelineContainer, UpdateWrapper } from './styled';
-import Button from "@components/Button";
 
 import { randomizeDataWithCurrency } from "@utils/randomizer";
+
+import observable from "../Observer";
+
 
 export default class CurrenciesTimeline extends Component {
 
@@ -27,6 +30,22 @@ export default class CurrenciesTimeline extends Component {
         }
 
         this.setState = this.setState.bind(this);
+    }
+
+    componentDidMount() {
+        observable.subscribe(this.notify);
+    }
+
+    componentWillUnmount() {
+        observable.unsubscribe(this.notify);
+    }
+
+    notify(data) {
+        console.log(data);
+    }
+
+    handleNotify() {
+        observable.notify("The chart has successfully built!");
     }
 
     handleChartChangeModalOpen = () => {
@@ -50,7 +69,8 @@ export default class CurrenciesTimeline extends Component {
     handleRandomize = () => {
         this.setState({
             chartData: randomizeDataWithCurrency(this.state.selectedDate, this.state.selectedCurrency.id, 30)
-        })
+        });
+        this.handleNotify();
     }
 
     handleDataChange = (date, data) => {
@@ -80,7 +100,8 @@ export default class CurrenciesTimeline extends Component {
                     }
                     return data;
                 })
-            })
+            });
+            this.handleNotify();
         }
     }
 
