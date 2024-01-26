@@ -5,13 +5,12 @@ import CurrenciesTabs from './CurrenciesTabs';
 import TimelineDatePicker from './TimelineDatePicker';
 import ChartChangeModal from './ChartChangeModal';
 
-import CANDLESTICK_DATA from './mockData';
 import { BASE_CURRENCY, QUOTES_DATA } from '@constants/currencies';
 
 import { TimelineContainer, UpdateWrapper } from './styled';
 import Button from "@components/Button";
 
-import { randomizeData, randomizeExistingData } from "@utils/randomizer";
+import { randomizeData } from "@utils/randomizer";
 
 export default class CurrenciesTimeline extends Component {
 
@@ -22,6 +21,8 @@ export default class CurrenciesTimeline extends Component {
             selectedCurrency: BASE_CURRENCY,
             selectedDate: 0,
             isOpen: false,
+            dateForChange: 0,
+            dataForChange: [],
             chartData: []
         }
 
@@ -48,14 +49,37 @@ export default class CurrenciesTimeline extends Component {
 
     handleRandomize = () => {
         this.setState({
-            chartData: randomizeData(1706190844061, 30, 0, 20)
+            chartData: randomizeData(this.state.selectedDate, 30, 0, 20)
         })
+    }
+
+    handleDataChange = (date, data) => {
+        this.setState({
+            dateForChange: date,
+            dataForChange: data
+        });
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (prevState.selectedDate !== this.state.selectedDate) {
             this.setState({
                 chartData: randomizeData(this.state.selectedDate, 30, 0, 20)
+            })
+        }
+
+        if (prevState.dateForChange !== this.state.dateForChange || prevState.dataForChange !== this.state.dataForChange) {
+            this.setState({
+                chartData: this.state.chartData.map(data => {
+                    const { x: date } = data;
+                    const msDate = +date;
+                    if (msDate == this.state.dateForChange) {
+                        return {
+                            x: date,
+                            y: this.state.dataForChange
+                        }
+                    }
+                    return data;
+                })
             })
         }
     }
@@ -79,7 +103,7 @@ export default class CurrenciesTimeline extends Component {
                     </UpdateWrapper>
                     <CurrenciesChart data={this.state.chartData} />
                 </TimelineContainer>
-                <ChartChangeModal isOpen={this.state.isOpen} close={this.handleChartChangeModalClose} />
+                <ChartChangeModal isOpen={this.state.isOpen} close={this.handleChartChangeModalClose} data={this.state.chartData} handleDataChange={this.handleDataChange} />
             </>
         )
     }

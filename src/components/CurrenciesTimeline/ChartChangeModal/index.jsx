@@ -9,6 +9,7 @@ export default class ChartChangeModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            selectedDate: 0,
             open: 0,
             high: 0,
             low: 0,
@@ -37,16 +38,21 @@ export default class ChartChangeModal extends Component {
         })
     }
 
+    handleSelectChange = (e) => {
+        this.setState({ selectedDate: Number(e.target.value) })
+    }
+
     handleDataChange = () => {
-        const { close, high, low, open } = this.state;
-        if (close && high && low && open) {
-            if (high > low && open > close && open >= high && low >= close) {
-                alert("Все ок!");
+        const { close, high, low, open, selectedDate } = this.state;
+        if (selectedDate && close && high && low && open) {
+            if (high > low && close >= low && close <= high && open >= low && open <= high) {
+                this.props.handleDataChange(selectedDate, [open, high, low, close]);
+                this.props.close();
             } else {
-                alert("Значения должны быть следующими: High > Low, Open > Close, Open >= High, Low >= Close");
+                alert("Значение high должно быть больше low, a close и open должны лежать в промежутке от high до low");
             }
         } else {
-            alert("Введены не все значения!")
+            alert("Введены не все значения!");
         }
     }
 
@@ -57,10 +63,11 @@ export default class ChartChangeModal extends Component {
                     <ModalWrapper>
                         <InputContainer>
                             <InputLabel>Date for change</InputLabel>
-                            <SelectInput>
-                                <option>Hello</option>
-                                <option>Heyyy</option>
-                                <option>Hey</option>
+                            <SelectInput onChange={this.handleSelectChange} value={this.state.selectedDate}>
+                                {this.props.data.map(({ x }) => {
+                                    const stringDate = x.toDateString();
+                                    return <option key={stringDate} value={+x}>{stringDate}</option>
+                                })}
                             </SelectInput>
                         </InputContainer>
                         <InputContainer>
