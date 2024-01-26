@@ -6,6 +6,8 @@ import SearchBar from './SearchBar';
 import { QUOTES_DATA } from "@constants/currencies";
 import BANKS from "./config";
 
+import CurrentCurrencyLabel from './styled';
+
 export default class BanksMap extends Component {
     constructor(props) {
         super(props);
@@ -30,6 +32,7 @@ export default class BanksMap extends Component {
         return (
             <>
                 <SearchBar data={QUOTES_DATA} changeSearchCurrency={this.handleCurrencyForSearchChange} />
+                <CurrentCurrencyLabel>Currency for search: {this.state.currencyForSearch}</CurrentCurrencyLabel>
                 <Map banks={this.state.banksWithCurrency} />
             </>
         )
