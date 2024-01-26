@@ -24,6 +24,7 @@ export default class CurrenciesTimeline extends Component {
             selectedCurrency: BASE_CURRENCY,
             selectedDate: 0,
             isOpen: false,
+            isNotificationActive: false,
             dateForChange: 0,
             dataForChange: [],
             chartData: []

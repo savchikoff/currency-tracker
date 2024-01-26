@@ -20,22 +20,22 @@ export default class ChartChangeModal extends Component {
 
     handleOpenChange = (e) => {
         this.setState({
-            open: Number(e.target.value)
+            open: e.target.value
         })
     }
     handleHighChange = (e) => {
         this.setState({
-            high: Number(e.target.value)
+            high: e.target.value
         })
     }
     handleLowChange = (e) => {
         this.setState({
-            low: Number(e.target.value)
+            low: e.target.value
         })
     }
     handleCloseChange = (e) => {
         this.setState({
-            close: Number(e.target.value)
+            close: e.target.value
         })
     }
 
@@ -45,6 +45,10 @@ export default class ChartChangeModal extends Component {
 
     handleDataChange = () => {
         const { close, high, low, open, selectedDate } = this.state;
+        const closeToNumber = Number(close);
+        const highToNumber = Number(high);
+        const lowToNumber = Number(low);
+        const openToNumber = Number(open);
         if (selectedDate && close && high && low && open) {
             if (high > low && close >= low && close <= high && open >= low && open <= high) {
                 this.props.handleDataChange(selectedDate, [open, high, low, close]);
