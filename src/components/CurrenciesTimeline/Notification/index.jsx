@@ -1,28 +1,39 @@
-import { useEffect } from "react";
+import { Component } from "react";
 import { NotificationWrapper, NotificationTitle, NotificationContent } from "./styled";
 
-export default function Notification({ active, handleNotificationActive }) {
+export default class Notification extends Component {
 
-  useEffect(() => {
-    let timeoutId;
-    if (active) {
-      timeoutId = setTimeout(() => {
-        handleNotificationActive();
-      }, 2000);
+  constructor(props) {
+    super(props);
+    this.timer = null;
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.active !== prevProps.active) {
+      console.log('Hello');
+      this.timer = setTimeout(() => {
+        this.props.handleNotificationActive();
+      }, 5000);
     }
-    return () => clearTimeout(timeoutId);
-  }, [active]);
+  }
 
-  return (
-    <>
-      {active && (
-        <NotificationWrapper>
-          <NotificationTitle>Chart status</NotificationTitle>
-          <NotificationContent>
-            Your chart has been successfully built!
-          </NotificationContent>
-        </NotificationWrapper>
-      )}
-    </>
-  );
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+  }
+
+  render() {
+    return (
+      <>
+        {this.props.active && (
+          <NotificationWrapper>
+            <NotificationTitle>Chart status</NotificationTitle>
+            <NotificationContent>
+              ✅ Your chart has been successfully built!
+            </NotificationContent>
+          </NotificationWrapper>
+        )}
+      </>
+    )
+  }
 }
+
