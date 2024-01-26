@@ -60,7 +60,8 @@ export const SelectInput = styled.select`
         border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
         border-image-slice: 1;
     }
-    option{
-        color: #030304;
-    }
 `
+
+export const Option = styled.option`
+    color: #030304;
+`;

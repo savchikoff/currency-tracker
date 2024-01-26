@@ -10,7 +10,7 @@ import { BASE_CURRENCY, QUOTES_DATA } from '@constants/currencies';
 import { TimelineContainer, UpdateWrapper } from './styled';
 import Button from "@components/Button";
 
-import { randomizeData } from "@utils/randomizer";
+import { randomizeDataWithCurrency } from "@utils/randomizer";
 
 export default class CurrenciesTimeline extends Component {
 
@@ -49,7 +49,7 @@ export default class CurrenciesTimeline extends Component {
 
     handleRandomize = () => {
         this.setState({
-            chartData: randomizeData(this.state.selectedDate, 30, 0, 20)
+            chartData: randomizeDataWithCurrency(this.state.selectedDate, this.state.selectedCurrency.id, 30)
         })
     }
 
@@ -61,10 +61,10 @@ export default class CurrenciesTimeline extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevState.selectedDate !== this.state.selectedDate) {
-            this.setState({
-                chartData: randomizeData(this.state.selectedDate, 30, 0, 20)
-            })
+        if (prevState.selectedDate !== this.state.selectedDate || prevState.selectedCurrency !== this.state.selectedCurrency) {
+            if (this.state.selectedDate) {
+                this.handleRandomize();
+            }
         }
 
         if (prevState.dateForChange !== this.state.dateForChange || prevState.dataForChange !== this.state.dataForChange) {

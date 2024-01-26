@@ -39,7 +39,7 @@ export default class ChartChangeModal extends Component {
     }
 
     handleSelectChange = (e) => {
-        this.setState({ selectedDate: Number(e.target.value) })
+        this.setState({ selectedDate: Number(e.target.value) });
     }
 
     handleDataChange = () => {
