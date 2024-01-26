@@ -5,6 +5,7 @@ import CurrenciesTabs from './CurrenciesTabs';
 import TimelineDatePicker from './TimelineDatePicker';
 import ChartChangeModal from './ChartChangeModal';
 import Button from "@components/Button";
+import Notification from './Notification';
 
 import { BASE_CURRENCY, QUOTES_DATA } from '@constants/currencies';
 
@@ -31,22 +32,57 @@ export default class CurrenciesTimeline extends Component {
         }
 
         this.setState = this.setState.bind(this);
+        this.notify = this.notify.bind(this);
+        this.handleNotificationActive = this.handleNotificationActive.bind(this);
     }
 
     componentDidMount() {
         observable.subscribe(this.notify);
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.selectedDate !== this.state.selectedDate || prevState.selectedCurrency !== this.state.selectedCurrency) {
+            if (this.state.selectedDate) {
+                this.handleRandomize();
+            }
+        }
+
+        if (prevState.dateForChange !== this.state.dateForChange || prevState.dataForChange !== this.state.dataForChange) {
+            this.setState({
+                chartData: this.state.chartData.map(data => {
+                    const { x: date } = data;
+                    const msDate = +date;
+                    if (msDate == this.state.dateForChange) {
+                        return {
+                            x: date,
+                            y: this.state.dataForChange
+                        }
+                    }
+                    return data;
+                })
+            });
+            this.handleNotify();
+        }
+    }
+
     componentWillUnmount() {
         observable.unsubscribe(this.notify);
     }
 
-    notify(data) {
-        console.log(data);
+    notify() {
+        this.setState({
+            isNotificationActive: true
+        });
+    }
+
+    handleNotificationActive() {
+        this.setState({
+            isNotificationActive: false
+        });
     }
 
     handleNotify() {
-        observable.notify("The chart has successfully built!");
+        observable.notify();
     }
 
     handleChartChangeModalOpen = () => {
@@ -81,31 +117,6 @@ export default class CurrenciesTimeline extends Component {
         });
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (prevState.selectedDate !== this.state.selectedDate || prevState.selectedCurrency !== this.state.selectedCurrency) {
-            if (this.state.selectedDate) {
-                this.handleRandomize();
-            }
-        }
-
-        if (prevState.dateForChange !== this.state.dateForChange || prevState.dataForChange !== this.state.dataForChange) {
-            this.setState({
-                chartData: this.state.chartData.map(data => {
-                    const { x: date } = data;
-                    const msDate = +date;
-                    if (msDate == this.state.dateForChange) {
-                        return {
-                            x: date,
-                            y: this.state.dataForChange
-                        }
-                    }
-                    return data;
-                })
-            });
-            this.handleNotify();
-        }
-    }
-
     render() {
         const isButtonsEnabled = !!this.state.selectedDate && this.state.selectedCurrency;
         return (
@@ -125,6 +136,7 @@ export default class CurrenciesTimeline extends Component {
                     </UpdateWrapper>
                     <CurrenciesChart data={this.state.chartData} />
                 </TimelineContainer>
+                <Notification active={this.state.isNotificationActive} handleNotificationActive={this.handleNotificationActive} />
                 <ChartChangeModal isOpen={this.state.isOpen} close={this.handleChartChangeModalClose} data={this.state.chartData} handleDataChange={this.handleDataChange} />
             </>
         )
