@@ -19,6 +19,11 @@ export const InputLabel = styled.div`
     font-size: 20px;
 `
 
+export const ErrorLabel = styled(InputLabel)`
+    text-wrap: balance;
+    color: #EF403C;
+`
+
 export const TextInput = styled.input`
     font-family: inherit;
     font-size: 35px;
