@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   background-color: #202025;
   border: 1px solid #474747;
   width: 366px;
-  padding: 32px;
+  padding: 24px;
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;

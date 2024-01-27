@@ -16,7 +16,6 @@ export const InputContainer = styled.div`
 `
 
 export const InputLabel = styled.div`
-    font-size: 20px;
 `
 
 export const ErrorLabel = styled.div`
