@@ -15,12 +15,11 @@ export const Background = styled.div`
 export const Wrapper = styled.div`
   background-color: #202025;
   border: 1px solid #474747;
-  min-width: 300px;
+  width: 366px;
   padding: 32px;
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;
-  box-shadow: 0 3px 15px -3px rgba(0, 0, 0, 0.2);
   position: relative;
 `;
 
