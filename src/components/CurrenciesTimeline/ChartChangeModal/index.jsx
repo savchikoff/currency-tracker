@@ -45,12 +45,13 @@ export default class ChartChangeModal extends Component {
 
     handleDataChange = () => {
         const { close, high, low, open, selectedDate } = this.state;
-        const closeToNumber = Number(close);
-        const highToNumber = Number(high);
-        const lowToNumber = Number(low);
-        const openToNumber = Number(open);
+        const isEnteredDataCorrect = Number(high) > Number(low) &&
+            Number(close) >= Number(low) &&
+            Number(close) <= Number(high) &&
+            Number(open) >= Number(low) &&
+            Number(open) <= Number(high);
         if (selectedDate && close && high && low && open) {
-            if (high > low && close >= low && close <= high && open >= low && open <= high) {
+            if (isEnteredDataCorrect) {
                 this.props.handleDataChange(selectedDate, [open, high, low, close]);
                 this.props.close();
                 this.setState({
@@ -62,12 +63,12 @@ export default class ChartChangeModal extends Component {
                 })
             } else {
                 this.setState({
-                    error: "Значение high должно быть больше low, a close и open должны лежать в промежутке от high до low"
+                    error: "High must be higher than low, close and open must be between high and low"
                 });
             }
         } else {
             this.setState({
-                error: "Введены не все значения"
+                error: "Not all values were entered"
             });
         }
     }

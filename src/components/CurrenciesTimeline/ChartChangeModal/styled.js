@@ -19,9 +19,10 @@ export const InputLabel = styled.div`
     font-size: 20px;
 `
 
-export const ErrorLabel = styled(InputLabel)`
-    text-wrap: balance;
+export const ErrorLabel = styled.span`
     color: #EF403C;
+    word-break: break-word;
+    text-wrap: balance;
 `
 
 export const TextInput = styled.input`
