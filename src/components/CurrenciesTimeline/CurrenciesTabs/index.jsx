@@ -1,6 +1,8 @@
 import { Component } from 'react';
 
 import { ButtonGroup, Tab, TabContent, CurrencyName, CurrencyImg } from './styled'
+import { QUOTES_DATA } from '@constants/currencies';
+
 
 export default class CurrenciesTabs extends Component {
     constructor(props) {
@@ -16,7 +18,7 @@ export default class CurrenciesTabs extends Component {
     render() {
         return (
             <ButtonGroup>
-                {this.props.currencies.map(currency => {
+                {QUOTES_DATA.map(currency => {
                     const { id, img } = currency;
                     return (
                         <Tab key={id} active={this.props.selectedCurrency.id === id} onClick={() => this.handleSetTabActive(id, img)}>

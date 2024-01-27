@@ -7,7 +7,7 @@ import ChartChangeModal from './ChartChangeModal';
 import Button from "@components/Button";
 import Notification from './Notification';
 
-import { BASE_CURRENCY, QUOTES_DATA } from '@constants/currencies';
+import { BASE_CURRENCY } from '@constants/currencies';
 
 import { TimelineContainer, UpdateWrapper } from './styled';
 
@@ -122,7 +122,7 @@ export default class CurrenciesTimeline extends Component {
         return (
             <>
                 <TimelineContainer>
-                    <CurrenciesTabs currencies={QUOTES_DATA} selectedCurrency={this.state.selectedCurrency} setSelectedCurrency={this.setState} />
+                    <CurrenciesTabs selectedCurrency={this.state.selectedCurrency} setSelectedCurrency={this.setState} />
                     <UpdateWrapper>
                         <TimelineDatePicker handleStartDateChange={this.handleStartDateChange} />
                         {
