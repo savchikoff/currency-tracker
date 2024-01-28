@@ -1,5 +1,8 @@
 import { useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
+
+import PropTypes from 'prop-types';
+
 import { Background, Wrapper, HeaderRow, ScrollDisabler, Content } from "./styled";
 import closeIcon from "@assets/icons/close.svg";
 
@@ -45,5 +48,14 @@ const Modal = ({ isOpen, close, children }) => {
         portalRoot
     );
 };
+
+Modal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    close: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired
+}
 
 export default Modal;

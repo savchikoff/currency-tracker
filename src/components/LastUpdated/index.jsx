@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import { LastUpdatedContainer, LastUpdatedDotInner, LastUpdatedDotOuter, LastUpdatedInfo } from './styled';
 import { getCachedData } from '@utils/request';
 import { formatDate } from '@utils/formatting';
