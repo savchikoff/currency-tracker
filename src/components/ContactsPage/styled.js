@@ -25,13 +25,12 @@ export const ContactsText = styled.p``;
 export const InputWrapper = styled.div`
     display: flex;
     align-items: center;
-    width: 30%;
     gap: 16px;
 `;
 
 export const MailInput = styled.input`
     font-family: inherit;
-    width: 100%;
+    min-width: 250px;
     font-size: 35px;
     font-weight: 300;
     border: none;
