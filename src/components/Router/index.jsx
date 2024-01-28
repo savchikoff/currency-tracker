@@ -1,26 +1,25 @@
 import { Route, Routes, HashRouter } from "react-router-dom";
+import { Suspense } from "react";
 
 import AppLayout from "@components/AppLayout";
+import Loader from "@components/Loader";
 
-import Home from "@pages/Home";
-import Timeline from "@pages/Timeline";
-import Contacts from "@pages/Contacts";
-import BankCard from "@pages/BankCard";
-import ErrorPage from "@pages/Error";
+import NAVIGATION from "@constants/navigation";
 
 const Router = () => {
     return (
         <HashRouter>
-            <Routes>
-                <Route element={<AppLayout />}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/timeline" element={<Timeline />} />
-                    <Route path="/bank-card" element={<BankCard />} />
-                    <Route path="/contacts" element={<Contacts />} />
-                    <Route path="*" element={<ErrorPage />} />
-                </Route>
-            </Routes>
-        </HashRouter>
+            <Suspense fallback={<Loader />}>
+                <Routes>
+                    <Route element={<AppLayout />}>
+                        {Object.values(NAVIGATION).map((item) => {
+                            const { path, element } = item;
+                            return <Route element={element} key={path} path={path} />;
+                        })}
+                    </Route>
+                </Routes>
+            </Suspense >
+        </HashRouter >
     )
 }
 
