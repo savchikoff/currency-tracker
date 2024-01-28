@@ -1,8 +1,10 @@
-import { Component } from 'react'
+import { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Modal from "@components/Modal";
+import Button from '../../Button';
 
 import { ModalContainer, InputContainer, InputLabel, TextInput, SelectInput, Option, ModalWrapper, ErrorLabel } from './styled';
-import Button from '../../Button';
 
 export default class ChartChangeModal extends Component {
 
@@ -110,4 +112,11 @@ export default class ChartChangeModal extends Component {
             </Modal>
         )
     }
+}
+
+ChartChangeModal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    close: PropTypes.func.isRequired,
+    data: PropTypes.array.isRequired,
+    handleDataChange: PropTypes.func.isRequired
 }

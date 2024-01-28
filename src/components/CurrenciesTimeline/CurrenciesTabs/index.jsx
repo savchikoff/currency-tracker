@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { ButtonGroup, Tab, TabContent, CurrencyName, CurrencyImg } from './styled'
 import { QUOTES_DATA } from '@constants/currencies';
@@ -32,4 +33,9 @@ export default class CurrenciesTabs extends Component {
             </ButtonGroup>
         )
     }
+}
+
+CurrenciesTabs.propTypes = {
+    selectedCurrency: PropTypes.object.isRequired,
+    setSelectedCurrency: PropTypes.func.isRequired
 }

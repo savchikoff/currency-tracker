@@ -1,5 +1,8 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
+
 import { NotificationWrapper, NotificationTitle, NotificationContent } from "./styled";
+
 
 export default class Notification extends Component {
 
@@ -35,5 +38,10 @@ export default class Notification extends Component {
       </>
     )
   }
+}
+
+Notification.propTypes = {
+  active: PropTypes.bool.isRequired,
+  handleNotificationActive: PropTypes.func.isRequired
 }
 

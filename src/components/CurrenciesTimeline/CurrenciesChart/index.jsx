@@ -1,10 +1,12 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
+
 import Chart from "react-apexcharts";
 
 import CANDLESTICK_OPTIONS from './config'
 
 
-class CurrenciesChart extends Component {
+export default class CurrenciesChart extends Component {
     constructor(props) {
         super(props);
 
@@ -49,4 +51,6 @@ class CurrenciesChart extends Component {
     }
 }
 
-export default CurrenciesChart;
+CurrenciesChart.propTypes = {
+    data: PropTypes.array.isRequired
+}
