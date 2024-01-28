@@ -24,12 +24,14 @@ const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmou
 
 
     const handleChangeAmount = (e) => {
-        setAmount(Number(e.target.value));
+        setAmount(e.target.value);
     };
 
     const handleConvert = () => {
-        const convertedValue = convertCurrency(currencies, amount, chosenCurrencyName, targetCurrency.id);
-        setConvertedAmount(Number(convertedValue));
+        if (Number(amount) > 0) {
+            const convertedValue = convertCurrency(currencies, Number(amount), chosenCurrencyName, targetCurrency.id);
+            setConvertedAmount(Number(convertedValue));
+        }
     }
 
     return (
