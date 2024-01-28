@@ -10,6 +10,8 @@ import { BASE_CURRENCY } from "@constants/currencies";
 import convertCurrency from "@utils/convertor"
 import Select from "./Select";
 
+const PLACEHOLDER = "Enter the amount";
+
 const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmount, currencies }) => {
     const { id: chosenCurrencyName, img } = chosenCurrency;
 
@@ -32,7 +34,7 @@ const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmou
 
     return (
         <Modal isOpen={isOpen} close={close}>
-            <AmountInput value={amount} onChange={handleChangeAmount} />
+            <AmountInput value={amount} onChange={handleChangeAmount} placeholder={PLACEHOLDER} />
             <CurrenciesContainer>
                 <CurrentCurrency>
                     <Label>From</Label>

@@ -27,7 +27,7 @@ export const CurrenciesContainer = styled.div`
   gap: 20px;
 `
 
-export const Label = styled.div`
+export const Label = styled.label`
   font-weight: 300px;
 `
 
