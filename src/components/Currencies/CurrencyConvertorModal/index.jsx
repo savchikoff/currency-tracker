@@ -61,12 +61,12 @@ const CurrencyConvertorModal = ({ isOpen, close, chosenCurrency, amount, setAmou
 }
 
 CurrencyConvertorModal.propTypes = {
-    isOpen: PropTypes.bool,
-    close: PropTypes.func,
-    chosenCurrency: PropTypes.object,
-    amount: PropTypes.number,
-    setAmount: PropTypes.func,
-    currencies: PropTypes.object
+    isOpen: PropTypes.bool.isRequired,
+    close: PropTypes.func.isRequired,
+    chosenCurrency: PropTypes.object.isRequired,
+    amount: PropTypes.number.isRequired,
+    setAmount: PropTypes.func.isRequired,
+    currencies: PropTypes.object.isRequired
 
 }
 

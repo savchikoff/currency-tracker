@@ -49,10 +49,10 @@ const Select = ({ targetCurrency, chosenCurrency, setTargetCurrency, setConverte
 }
 
 Select.propTypes = {
-    targetCurrency: PropTypes.object,
-    chosenCurrency: PropTypes.object,
-    setTargetCurrency: PropTypes.func,
-    setConvertedAmount: PropTypes.func
+    targetCurrency: PropTypes.object.isRequired,
+    chosenCurrency: PropTypes.object.isRequired,
+    setTargetCurrency: PropTypes.func.isRequired,
+    setConvertedAmount: PropTypes.func.isRequired
 }
 
 export default Select;

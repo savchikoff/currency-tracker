@@ -16,11 +16,11 @@ const CurrencyCard = ({ name, img, alt, value, handleCardClick }) => {
 }
 
 CurrencyCard.propTypes = {
-    name: PropTypes.string,
-    img: PropTypes.string,
-    alt: PropTypes.string,
-    value: PropTypes.string,
-    handleCardClick: PropTypes.func
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    handleCardClick: PropTypes.func.isRequired
 }
 
 export default CurrencyCard;
