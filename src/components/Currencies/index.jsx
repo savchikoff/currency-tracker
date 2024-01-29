@@ -17,6 +17,7 @@ const Currencies = () => {
     const [chosenCurrency, setChosenCurrency] = useState(BASE_CURRENCY);
 
 
+
     const getCurrenciesRates = async () => {
         if (isCacheValid(currencies)) {
             const cachedCurrencies = getCachedData();
