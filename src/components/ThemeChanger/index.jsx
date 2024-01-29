@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 
-import { light, dark } from "@constants/theme";
+import { readFromCache, writeToCache } from "../../utils/cache";
 
+import { dark, light } from "@constants/theme";
 
 const ThemeChanger = ({ children }) => {
     const [theme, setTheme] = useState(dark);
-    const toggleTheme = () => {
-        setTheme(theme === dark ? light : dark);
-    }
+
+    useEffect(() => {
+        const cachedTheme = readFromCache("theme");
+        if (cachedTheme) {
+            const newTheme = cachedTheme === "dark" ? dark : light;
+            setTheme(newTheme);
+        } else {
+            writeToCache("theme", "dark");
+        }
+    }, []);
+
     return (
-        <ThemeProvider theme={{ theme, toggleTheme }}>
+        <ThemeProvider theme={{ theme, setTheme }}>
             {children}
         </ThemeProvider>
     )
