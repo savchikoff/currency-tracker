@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 
-import { light, dark } from "./styled";
+import { light, dark } from "@constants/theme";
 
 
 const ThemeChanger = ({ children }) => {

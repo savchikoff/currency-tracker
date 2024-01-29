@@ -1,3 +1,7 @@
+export const baseStyles = {
+
+}
+
 export const dark = {
     name: "dark",
     colors: {
