@@ -13,7 +13,6 @@ export default class Notification extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.active !== prevProps.active) {
-      console.log('Hello');
       this.timer = setTimeout(() => {
         this.props.handleNotificationActive();
       }, 5000);

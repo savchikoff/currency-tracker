@@ -21,7 +21,6 @@ const CurrencySection = ({ header, cards, currencies, handleConvertorModalOpen, 
                 </CurrencySectionCards>
             </CurrencySectionContainer>
         </>
-
     )
 }
 

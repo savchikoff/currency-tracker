@@ -6,7 +6,6 @@ import { Label, Input, Switch } from "./styled";
 const ToggleButton = () => {
   const [checked, setChecked] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
-  console.log(theme);
 
   const handleChange = (e) => {
     setChecked(e.target.checked);

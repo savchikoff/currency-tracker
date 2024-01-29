@@ -1,11 +1,11 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { ButtonGroup, Tab, TabContent, CurrencyName, CurrencyImg } from './styled'
 import { QUOTES_DATA } from '@constants/currencies';
 
 
-export default class CurrenciesTabs extends Component {
+export default class CurrenciesTabs extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -22,7 +22,7 @@ export default class CurrenciesTabs extends Component {
                 {QUOTES_DATA.map(currency => {
                     const { id, img } = currency;
                     return (
-                        <Tab key={id} active={this.props.selectedCurrency.id === id} onClick={() => this.handleSetTabActive(id, img)}>
+                        <Tab key={id} active={this.props.selectedCurrency.id === id ? 1 : 0} onClick={() => this.handleSetTabActive(id, img)}>
                             <TabContent>
                                 <CurrencyImg src={img} />
                                 <CurrencyName>{id}</CurrencyName>
