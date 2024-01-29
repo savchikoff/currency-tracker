@@ -11,8 +11,8 @@ export const LoaderContainer = styled.div`
 export const LoaderIcon = styled.span`
     width: 120px;
     height: 120px;
-    border: 5px solid #FFFFFF;
-    border-bottom-color: #00CE2C;
+    border: 8px solid #00CE2C;
+    border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;

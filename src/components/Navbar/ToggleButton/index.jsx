@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import { Label, Input, Switch } from './styled'
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "styled-components";
+
+import { Label, Input, Switch } from "./styled";
 
 const ToggleButton = () => {
   const [checked, setChecked] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  console.log(theme);
 
   const handleChange = (e) => {
     setChecked(e.target.checked);
+    toggleTheme();
   };
 
   return (

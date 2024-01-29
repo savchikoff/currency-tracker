@@ -7,7 +7,7 @@ export const LinksColumn = styled.div`
 `;
 
 export const LinksHeader = styled.span`
-    color: #FFFFFF;
+    color: ${props => props.theme.theme.colors.text};
     font-size: 28px;
     font-weight: 300;
 `;
@@ -22,7 +22,6 @@ export const Links = styled.div`
         font-size: 24px;
         font-weight: 400;
         line-height: normal;
-        text-decoration: none;
 
         &:hover{
             color: #00BC4F;

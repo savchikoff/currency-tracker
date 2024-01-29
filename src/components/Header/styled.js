@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
     padding-top: 33px;
     padding-bottom: 59px;
-    background: linear-gradient(253deg, #121212 11.77%, rgba(36, 121, 64, 0.00) 91.12%);
+    background: linear-gradient(74deg, #00B03A 7.59%, rgba(1, 185, 61, 0.45) 92%);
 `
 
 export const HeaderWrapper = styled.h1`

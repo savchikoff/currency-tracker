@@ -20,11 +20,7 @@ export const NavbarLinks = styled.ul`
     transition: 0.3s;
 
     a{
-        color: #FFFFFF;
         font-size: 20px;
-        font-weight: 300;
-        text-decoration: none;
-
         &:hover{
             color: #00BC4F;
         }

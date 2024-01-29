@@ -2,8 +2,8 @@ import { createGlobalStyle, styled } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: #D9D9D9;
-    background-color: #030304;
+    color: ${props => props.theme.theme.colors.text};
+    background-color: ${props => props.theme.theme.colors.background};
     font-family: 'Poppins', sans-serif;
   }
   body,
@@ -22,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
   dd {
     margin: 0;
   } 
+
+  a{
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+  }
 
   .root{
     margin: 0 auto;

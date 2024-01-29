@@ -44,7 +44,7 @@ export const FooterHeader = styled.h3`
 
 export const FooterText = styled.p`
     font-size: 24px;
-    color: #FFFFFF;
+    color: ${props => props.theme.theme.colors.text};
     font-weight: 300;
 `
 
