@@ -20,7 +20,7 @@ CurrencyCard.propTypes = {
     img: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    handleCardClick: PropTypes.func.isRequired
+    handleCardClick: PropTypes.func
 }
 
 export default CurrencyCard;

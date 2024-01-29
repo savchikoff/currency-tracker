@@ -1,11 +1,11 @@
-import { LoaderContainer, LoaderImage } from "./styled";
-
-import loader from "@assets/loader.gif"
+import { LoaderContainer, LoaderIcon } from "./styled";
+import GlobalStyles from "@styled";
 
 const Loader = () => {
     return (
         <LoaderContainer>
-            <LoaderImage src={loader} alt="loader" />
+            <GlobalStyles />
+            <LoaderIcon />
         </LoaderContainer>
     )
 }

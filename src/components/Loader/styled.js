@@ -8,4 +8,22 @@ export const LoaderContainer = styled.div`
     height: 100vh;
 `
 
-export const LoaderImage = styled.img``;
+export const LoaderIcon = styled.span`
+    width: 120px;
+    height: 120px;
+    border: 5px solid #FFFFFF;
+    border-bottom-color: #00CE2C;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+`;
