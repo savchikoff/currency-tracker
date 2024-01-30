@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Tab = styled.button`
-  padding: 10px 60px;
+  font-family: inherit;
+  padding: 8px 32px;
   cursor: pointer;
   opacity: 0.6;
   color: #FFFFFF;
@@ -16,6 +17,7 @@ export const Tab = styled.button`
     border-bottom: 2px solid #474747;
     opacity: 1;
   `}
+
 `;
 
 export const TabContent = styled.div`
@@ -26,12 +28,20 @@ export const TabContent = styled.div`
 `
 
 export const CurrencyName = styled.span`
-  font-size: 16 px;
+  font-size: 16px;
+
+  @media (max-width: 500px){
+    font-size: 12px;
+  }
 `;
 
 export const CurrencyImg = styled.img`
   width: 30px;
   height: 30px;
+  @media (max-width: 768px){
+    width: 24px;
+    height: 24px;
+  }
 `
 
 
@@ -40,4 +50,9 @@ export const ButtonGroup = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   flex-wrap: wrap;
+  
+  @media (max-width: 500px){
+    gap: 4px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

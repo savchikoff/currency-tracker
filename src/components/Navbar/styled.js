@@ -6,13 +6,22 @@ export const NavbarContainer = styled.nav`
     justify-content: space-between;
     min-height: 113px;
 
-    @media (max-width: 1120px){
+    @media (max-width: 1200px){
         min-height: 96px;
+    }
+    
+    @media (max-width: 768px){
+        min-height: 80px;
     }
 `
 
 export const NavbarLogo = styled.img`
+    height: 40px;
     user-select: none;
+
+    @media (max-width: 768px){
+        height: 32px;
+    }
 `
 
 export const NavbarLinks = styled.ul`
@@ -22,6 +31,7 @@ export const NavbarLinks = styled.ul`
     justify-content: space-between;
     list-style-type: none;
     transition: 0.3s;
+    padding: 0;
 
     a{
         font-size: 20px;
@@ -35,7 +45,20 @@ export const NavbarLinks = styled.ul`
         color: #00BC4F;
     }
 
-    @media (max-width: 1120px){
+    @media (max-width: 1200px){
         gap: 48px;
+    }
+
+    @media (max-width: 768px){
+        a{
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 500px){
+        gap: 16px;
+        a{
+            font-size: 12px;
+        }
     }
 `

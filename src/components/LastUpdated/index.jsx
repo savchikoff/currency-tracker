@@ -1,4 +1,4 @@
-import { LastUpdatedContainer, LastUpdatedDotInner, LastUpdatedDotOuter, LastUpdatedInfo } from './styled';
+import { LastUpdatedContainer, LastUpdatedInfo, BlinkingDot } from './styled';
 import { getCachedData } from '@utils/request';
 import { formatDate } from '@utils/formatting';
 
@@ -8,9 +8,7 @@ const LastUpdated = () => {
 
     return (
         <LastUpdatedContainer>
-            <LastUpdatedDotOuter>
-                <LastUpdatedDotInner />
-            </LastUpdatedDotOuter>
+            <BlinkingDot />
             <LastUpdatedInfo>Last updated {lastUpdate}</LastUpdatedInfo>
         </LastUpdatedContainer>
     )

@@ -47,7 +47,6 @@ export const TextInput = styled.input`
 
 export const SelectInput = styled.select`
     font-family: inherit;
-    font-size: 35px;
     width: 100%;
     font-weight: 300;
     border: none;

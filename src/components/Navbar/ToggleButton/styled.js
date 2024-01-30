@@ -9,10 +9,10 @@ export const Label = styled.label`
 
 export const Switch = styled.div`
   position: relative;
-  width: 60px;
-  height: 28px;
+  width: 48px;
+  height: 19px;
   background: #030304;
-  border-radius: 32px;
+  border-radius: 24px;
   border: 1px solid #FFFFFF;
   padding: 4px;
   transition: 300ms all;
@@ -21,9 +21,9 @@ export const Switch = styled.div`
     transition: 300ms all;
     content: "";
     position: absolute;
-    width: 28px;
-    height: 28px;
-    border-radius: 35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     top: 50%;
     left: 4px;
     background: #030304;
@@ -40,7 +40,7 @@ export const Input = styled.input`
     background: green;
 
     &:before {
-      transform: translate(32px, -50%);
+      transform: translate(26px, -50%);
       background: #FFFFFF;
     }
   }

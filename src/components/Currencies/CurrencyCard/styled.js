@@ -11,6 +11,13 @@ export const CardContainer = styled.div`
         transform: scale(1.05);
         cursor: pointer;
     }
+
+    @media (max-width: 768px){
+        padding: 20px;
+    }
+    @media (max-width: 768px){
+        padding: 16px;
+    }
 `;
 
 export const CardWrapper = styled.div`
@@ -23,6 +30,11 @@ export const CardImage = styled.img`
     @media (max-width: 1440px){
         width: 60px;
         height: 60px;
+    }
+
+    @media (max-width: 500px){
+        width: 30px;
+        height: 30px;
     }
 `;
 
@@ -37,6 +49,14 @@ export const CardHeader = styled.span`
     @media (max-width: 1440px){
         font-size: 24px;
     }
+
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+
+    @media (max-width: 500px){
+        font-size: 16px;
+    }
 `
 
 export const CardValue = styled.p`
@@ -44,5 +64,13 @@ export const CardValue = styled.p`
     font-weight: 300;
     @media (max-width: 1440px){
         font-size: 20px;
+    }
+
+    @media (max-width: 768px){
+        font-size: 16px;
+    }
+
+    @media (max-width: 500px){
+        font-size: 12px;
     }
 `

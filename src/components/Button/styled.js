@@ -24,6 +24,11 @@ const ButtonComponent = styled.button`
     &:active {
         transform: scale(0.9);
     }
+
+    @media (max-width: 500px){
+        font-size: 12px;
+        padding: 8px 16px;
+    }
 `
 
 export default ButtonComponent;

@@ -5,42 +5,76 @@ export const LastUpdatedContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 64px 0;
-    gap: 27px;
+    gap: 24px;
+
+    @media (max-width: 1200px){
+        padding: 48px 0;
+    }
+
+    @media (max-width: 768px){
+        padding: 32px 0;
+    }
+
+    @media (max-width: 500px){
+        gap: 8px;
+    }
 `
 
-export const LastUpdatedDotOuter = styled.div`
+export const BlinkingDot = styled.span`
+    width: 40px;
+    height: 40px;
+    display: inline-block;
     position: relative;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #007431;
-    animation: blink 1s linear infinite;
+    
+    &::after,&::before{
+        content: '';  
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid #00BC4F;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: scaling 2s linear infinite;
+    }
 
-    @keyframes blink {
-        25% {
-            opacity: 0.5;
+    &::after{
+        animation-delay: 1s;
+    }
+
+    @keyframes scaling {
+        0% {
+          transform: scale(0);
+          opacity: 1;
         }
-        50% {
-            opacity: 0;
-        }
-        75% {
-            opacity: 0.5;
+        100% {
+          transform: scale(1);
+          opacity: 0;
         }
     }
-`;
 
-export const LastUpdatedDotInner = styled.div`
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #00BC4F;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`;
+    @media (max-width: 500px){
+        width: 24px;
+        height: 24px;
+        &::after,&::before{
+            width: 24px;
+            height: 24px;
+            border: 2px solid #00BC4F;
+        }
+    }
+
+`
 
 export const LastUpdatedInfo = styled.span`
     font-size: 32px;
     font-weight: 300;
+    
+    @media (max-width: 1200px){
+        font-size: 24px
+    }
+
+    @media (max-width: 500px){
+        font-size: 16px;
+    }
 `;

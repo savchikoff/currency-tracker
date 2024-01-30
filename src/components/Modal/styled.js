@@ -10,6 +10,7 @@ export const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 `;
 
 export const Wrapper = styled.div`
@@ -21,12 +22,16 @@ export const Wrapper = styled.div`
   max-width: 90%;
   max-height: 90%;
   position: relative;
+
+  @media (max-width: 768px){
+    padding: 16px;
+  }
 `;
 
 export const HeaderRow = styled.div`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
 `;
 
 export const Content = styled.div`
@@ -34,6 +39,10 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 32px;
+
+  @media (max-width: 768px){
+    gap: 24px;
+  }
 `;
 
 export const ScrollDisabler = createGlobalStyle`

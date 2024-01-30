@@ -23,6 +23,11 @@ export const DropDownHeader = styled.div`
 export const CurrencyImage = styled.img`
   width: 30px;
   height: 30px;
+
+  @media (max-width: 500px){
+    width: 20px;
+    height: 20px;
+  }
 `
 export const CurrencyName = styled.span``
 

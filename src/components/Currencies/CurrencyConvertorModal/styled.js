@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const AmountInput = styled.input`
   font-family: inherit;
-  font-size: 35px;
   font-weight: 300;
   width: 50%;
   border: none;
@@ -20,6 +19,10 @@ export const AmountInput = styled.input`
     border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
     border-image-slice: 1;
   }
+
+  @media (max-width: 500px){
+    font-size: 16px;
+  }
 `;
 
 export const CurrenciesContainer = styled.div`
@@ -29,6 +32,11 @@ export const CurrenciesContainer = styled.div`
 
 export const Label = styled.label`
   font-weight: 300px;
+
+  @media (max-width: 500px){
+    font-size: 12px;
+  }
+
 `
 
 export const CurrentCurrency = styled.div`
@@ -54,6 +62,11 @@ export const CurrencyWrapper = styled.div`
 export const CurrencyImage = styled.img`
   width: 30px;
   height: 30px;
+
+  @media (max-width: 500px){
+    width: 20px;
+    height: 20px;
+  }
 `;
 export const CurrencyName = styled.span`
 
@@ -61,4 +74,8 @@ export const CurrencyName = styled.span`
 
 export const ConvertedAmount = styled.span`
   font-weight: 600;
+
+  @media (max-width: 500px){
+    font-size: 12px;
+  }
 `;

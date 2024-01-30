@@ -1,3 +1,6 @@
+import FooterLinks from '@components/Footer/FooterLinks'
+import Accordion from './Accordion';
+
 import {
     FooterContainer,
     FooterWrapper,
@@ -6,12 +9,10 @@ import {
     FooterTitle,
     FooterLogo,
     FooterHeader,
+    FooterAccordion,
     FooterText,
     Copyright
 } from './styled';
-
-import FooterLinks from '@components/Footer/FooterLinks'
-
 import { Container } from '../../styled';
 
 import logo from "@assets/logotype.svg"
@@ -20,8 +21,12 @@ import FOOTER_INFO from './config';
 
 const { header, text, footerNavigation, copyright } = FOOTER_INFO;
 
-const footerLinks = footerNavigation.map((column) => (
+const footerLinksLargeDevices = footerNavigation.map((column) => (
     <FooterLinks key={column.columnName} {...column} />
+))
+
+const footerLinksSmallDevices = footerNavigation.map((column) => (
+    <Accordion key={column.columnName} {...column} />
 ))
 
 const Footer = () => {
@@ -38,8 +43,9 @@ const Footer = () => {
                             {text}
                         </FooterText>
                     </FooterInfo>
-                    <FooterNavigation>{footerLinks}</FooterNavigation>
+                    <FooterNavigation>{footerLinksLargeDevices}</FooterNavigation>
                 </FooterWrapper>
+                <FooterAccordion>{footerLinksSmallDevices}</FooterAccordion>
                 <Copyright>{copyright}</Copyright>
             </FooterContainer>
         </Container>

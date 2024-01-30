@@ -13,7 +13,6 @@ export const SearchWrapper = styled.div`
 
 export const SearchInput = styled.input`
     font-family: inherit;
-    font-size: 35px;
     font-weight: 300;
     width: 100%;
     border: none;
@@ -31,6 +30,10 @@ export const SearchInput = styled.input`
     }
     position: relative;
     z-index: 2;
+
+    @media (max-width: 500px){
+        font-size: 12px;
+    }
 `;
 
 export const ResultListContainer = styled.div`
@@ -54,4 +57,9 @@ export const ResultItem = styled.li`
   padding: 16px 32px;
   border: 1px solid #474747;
   background-color: #202025;
+
+  @media (max-width: 500px){
+    font-size: 12px;
+    padding: 8px 16px;
+}
 `;
