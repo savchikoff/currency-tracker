@@ -22,6 +22,7 @@ export const Links = styled.div`
         font-size: 24px;
         font-weight: 400;
         line-height: normal;
+        transition: all 0.3s ease;
 
         &:hover{
             color: #00BC4F;

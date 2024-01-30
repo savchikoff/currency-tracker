@@ -5,6 +5,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Timeline = lazy(() => import("../pages/Timeline"));
 const BankCard = lazy(() => import("../pages/BankCard"));
 const Contacts = lazy(() => import("../pages/Contacts"));
+const NotFound = lazy(() => import("../pages/Error"));
 
 const NAVIGATION = {
     Home: {

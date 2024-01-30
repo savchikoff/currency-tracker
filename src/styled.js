@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
     margin: 0 auto;
     padding: 0 121px;
+
+    @media (max-width: 1120px){
+          padding: 0 96px;
+  }
 `;
 
 export default GlobalStyle;

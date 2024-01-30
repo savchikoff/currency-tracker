@@ -20,4 +20,10 @@ export const CurrencySectionCards = styled.div`
     grid-template-columns: repeat(2, 1fr);
     column-gap: 184px;
     row-gap: 56px;
+    
+    @media (max-width: 1120px){
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 `;

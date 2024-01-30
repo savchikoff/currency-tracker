@@ -5,6 +5,10 @@ export const NavbarContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     min-height: 113px;
+
+    @media (max-width: 1120px){
+        min-height: 96px;
+    }
 `
 
 export const NavbarLogo = styled.img`
@@ -21,13 +25,17 @@ export const NavbarLinks = styled.ul`
 
     a{
         font-size: 20px;
+        transition: all 0.3s ease;
         &:hover{
             color: #00BC4F;
         }
+    }
 
-        &:active{
-            color: #00BC4F;
-            text-decoration: underline;
-        }
+    .active{
+        color: #00BC4F;
+    }
+
+    @media (max-width: 1120px){
+        gap: 48px;
     }
 `

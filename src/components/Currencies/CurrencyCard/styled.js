@@ -15,10 +15,16 @@ export const CardContainer = styled.div`
 
 export const CardWrapper = styled.div`
     display: flex;
+    align-items: center;
     gap: 30px;
 `;
 
-export const CardImage = styled.img``;
+export const CardImage = styled.img`
+    @media (max-width: 1440px){
+        width: 60px;
+        height: 60px;
+    }
+`;
 
 export const CardTextContent = styled.div`
     display: flex;
@@ -26,11 +32,17 @@ export const CardTextContent = styled.div`
 `
 
 export const CardHeader = styled.span`
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 400;
+    @media (max-width: 1440px){
+        font-size: 24px;
+    }
 `
 
 export const CardValue = styled.p`
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 300;
+    @media (max-width: 1440px){
+        font-size: 20px;
+    }
 `

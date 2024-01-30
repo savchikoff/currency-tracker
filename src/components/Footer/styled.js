@@ -16,6 +16,7 @@ export const FooterNavigation = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 120px;
+    margin-left: 48px;
 `
 
 export const FooterInfo = styled.div`
