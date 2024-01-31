@@ -1,19 +1,63 @@
-export const baseStyles = {
+import {
+    breakpoints,
+    containerSizes,
+    sizes,
+    colors,
+    positions,
+    imageSizes,
+    fontWeights,
+    fonts,
+    width,
+    additionalValues
+} from "./styles";
 
+export const baseStyles = {
+    colors: {
+        ...colors
+    },
+    breakpoints: {
+        ...breakpoints
+    },
+    containerSizes: {
+        ...containerSizes
+    },
+    sizes: {
+        ...sizes
+    },
+    positions: {
+        ...positions
+    },
+    imageSizes: {
+        ...imageSizes
+    },
+    fontWeights: {
+        ...fontWeights
+    },
+    fonts: {
+        ...fonts
+    },
+    width: {
+        ...width
+    },
+    additionalValues: {
+        ...additionalValues
+    }
 }
 
 export const dark = {
     name: "dark",
-    colors: {
-        background: "#030304",
-        text: "#D9D9D9"
+    ...baseStyles,
+    themeColors: {
+        background: colors.black,
+        text: colors.lightGray
     }
 }
 
 export const light = {
     name: "light",
-    colors: {
-        background: "#F6F6F6",
-        text: "#030403"
+    ...baseStyles,
+    themeColors: {
+        background: colors.white,
+        text: colors.black
     }
 }

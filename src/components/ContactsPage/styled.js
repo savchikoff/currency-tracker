@@ -51,7 +51,7 @@ export const MailInput = styled.input`
     border: none;
     border-bottom: 2px solid #474747;
     outline: 0;
-    font-size: 17px;
+    font-size: 20px;
     color: #FFFFFF;
     padding: 7px 0;
     background: transparent;

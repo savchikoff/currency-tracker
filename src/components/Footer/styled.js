@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
     display: flex;
     flex-direction: column;
     padding: 40px 0;
-    gap: 55px;
+    gap: 56px;
 
     @media (max-width: 1200px){
         gap: 32px;
@@ -60,7 +60,7 @@ export const FooterHeader = styled.h3`
 
 export const FooterText = styled.p`
     font-size: 24px;
-    color: ${props => props.theme.theme.colors.text};
+    color: ${({ theme }) => theme.theme.themeColors.text};
     font-weight: 300;
     @media (max-width: 1440px){
         font-size: 16px;

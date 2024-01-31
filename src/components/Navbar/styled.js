@@ -4,7 +4,7 @@ export const NavbarContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 113px;
+    min-height: 112px;
 
     @media (max-width: 1200px){
         min-height: 96px;

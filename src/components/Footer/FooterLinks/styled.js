@@ -7,7 +7,7 @@ export const LinksColumn = styled.div`
 `;
 
 export const LinksHeader = styled.span`
-    color: ${props => props.theme.theme.colors.text};
+    color: ${props => props.theme.theme.themeColors.text};
     font-size: 28px;
     font-weight: 300;
 `;
@@ -15,7 +15,7 @@ export const LinksHeader = styled.span`
 export const Links = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 27px;
+    gap: 28px;
 
     a{
         color: #898989;

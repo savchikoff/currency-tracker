@@ -42,7 +42,7 @@ export const TextInput = styled.input`
     border-bottom: 2px solid #474747;
     outline: 0;
     color: #FFFFFF;
-    padding: 7px 0;
+    padding: 8px 0;
     background: transparent;
     transition: border-color 0.2s;
 
@@ -65,7 +65,7 @@ export const SelectInput = styled.select`
     border-bottom: 2px solid #474747;
     outline: 0;
     color: #FFFFFF;
-    padding: 7px 0;
+    padding: 8px 0;
     background: transparent;
     transition: border-color 0.2s;
 

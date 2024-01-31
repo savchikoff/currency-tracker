@@ -17,7 +17,7 @@ export const CurrencySectionHeader = styled.span`
     @media (max-width: 1200px){
         font-size: 24px;
         padding-bottom: 16px;
-        margin-bottom: 36px;
+        margin-bottom: 32px;
     }
 
     @media (max-width: 500px){

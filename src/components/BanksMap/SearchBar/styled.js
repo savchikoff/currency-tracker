@@ -1,26 +1,29 @@
 import styled from "styled-components";
 
+const s48 = ({ theme }) => theme.theme.sizes.s48;
+const w250 = ({ theme }) => theme.theme.width.w250;
+
 export const SearchContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 48px;
+    margin-bottom: ${s48};
 `;
 
 export const SearchWrapper = styled.div`
-    width: 250px;
+    width: ${w250};
 `
 
 export const SearchInput = styled.input`
     font-family: inherit;
     font-weight: 300;
+    font-size: 20px;
     width: 100%;
     border: none;
     border-bottom: 2px solid #474747;
     outline: 0;
-    font-size: 17px;
     color: #FFFFFF;
-    padding: 7px 0;
+    padding: 8px 0;
     background: transparent;
     transition: border-color 0.2s;
     &:focus{
@@ -28,6 +31,7 @@ export const SearchInput = styled.input`
         border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
         border-image-slice: 1;
     }
+    
     position: relative;
     z-index: 2;
 

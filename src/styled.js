@@ -1,11 +1,28 @@
 import { createGlobalStyle, styled } from 'styled-components';
 
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const themeBgColor = ({ theme }) => theme.theme.themeColors.background;
+const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
+const font = ({ theme }) => theme.theme.fonts.poppins;
+const fontLight = ({ theme }) => theme.theme.fontWeights.light;
+const baseContainer = ({ theme }) => theme.theme.containerSizes.base;
+const largeContainer = ({ theme }) => theme.theme.containerSizes.large;
+const mediumContainer = ({ theme }) => theme.theme.containerSizes.medium;
+const smallContainer = ({ theme }) => theme.theme.containerSizes.small;
+const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
+const none = ({ theme }) => theme.theme.additionalValues.none;
+const auto = ({ theme }) => theme.theme.additionalValues.auto;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${props => props.theme.theme.colors.text};
-    background-color: ${props => props.theme.theme.colors.background};
-    font-family: 'Poppins', sans-serif;
+    color: ${themeTextColor};
+    background-color: ${themeBgColor};
+    font-family: ${font};
   }
+  
   body,
   h1,
   h2,
@@ -20,36 +37,35 @@ const GlobalStyle = createGlobalStyle`
   blockquote,
   dl,
   dd {
-    margin: 0;
+    margin: ${s0};
   } 
 
   a{
-    font-weight: 300;
-    text-decoration: none;
-    color: inherit;
+    font-weight: ${fontLight};
+    text-decoration: ${none};
+    color: ${inherit};
   }
 
   .root{
-    margin: 0 auto;
-
-  }
+  margin: ${s0} ${auto};
+}
 `;
 
 export const Container = styled.div`
-    margin: 0 auto;
-    padding: 0 121px;
+  margin: ${s0} ${auto};
+  padding: ${baseContainer};
 
-    @media (max-width: 1200px){
-      padding: 0 96px;
-    }
+  @media(max-width: ${largeScreen}) {
+    padding: ${largeContainer};
+  }
 
-    @media (max-width: 768px){
-      padding: 0 64px;
-    }
+  @media(max-width: ${mediumScreen}) {
+    padding: ${mediumContainer};
+  }
 
-    @media (max-width: 500px){
-      padding: 0 32px;
-    }
+  @media(max-width: ${smallScreen}) {
+    padding: ${smallContainer};
+  }
 `;
 
 export default GlobalStyle;
