@@ -18,7 +18,7 @@ export const NavbarContainer = styled.nav`
 export const NavbarLogo = styled.img`
     height: 40px;
     user-select: none;
-
+    
     @media (max-width: 768px){
         height: 32px;
     }
@@ -50,6 +50,7 @@ export const NavbarLinks = styled.ul`
     }
 
     @media (max-width: 768px){
+        gap: 20px;
         a{
             font-size: 16px;
         }

@@ -7,6 +7,10 @@ export const ModalWrapper = styled.div`
     gap: 16px;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 500px){
+        gap: 8px;
+    }
 `;
 
 export const InputContainer = styled.div`
@@ -15,54 +19,63 @@ export const InputContainer = styled.div`
     align-items: center;
 `
 
-export const InputLabel = styled.div`
+export const InputLabel = styled.label` 
+    @media (max-width: 500px){
+        font-size: 12px;
+    }
 `
 
 export const ErrorLabel = styled.div`
     text-align: center;
     color: #EF403C;
     text-wrap: balance;
+    @media (max-width: 500px){
+        font-size: 12px;
+    }
 `
 
 export const TextInput = styled.input`
     font-family: inherit;
-    font-size: 35px;
     font-weight: 300;
+    font-size: 20px;
     border: none;
     border-bottom: 2px solid #474747;
     outline: 0;
-    font-size: 17px;
     color: #FFFFFF;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
+
     &:focus{
-        padding-bottom: 6px;
-        font-weight: 700;
-        border-width: 3px;
         border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
         border-image-slice: 1;
     }
+
+    @media (max-width: 500px){
+        font-size: 16px;
+    }
+
 `
 
 export const SelectInput = styled.select`
     font-family: inherit;
-    width: 100%;
     font-weight: 300;
+    font-size: 20px;
     border: none;
     border-bottom: 2px solid #474747;
     outline: 0;
-    font-size: 17px;
     color: #FFFFFF;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
+
     &:focus{
-        padding-bottom: 6px;
-        font-weight: 700;
-        border-width: 3px;
         border-image: linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%);
         border-image-slice: 1;
+    }
+
+    @media (max-width: 500px){
+        font-size: 16px;
     }
 `
 

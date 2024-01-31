@@ -20,6 +20,12 @@ export default class ChartChangeModal extends Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.isOpen !== this.props.isOpen) {
+            this.setState({ error: "" });
+        }
+    }
+
     handleOpenChange = (e) => {
         this.setState({
             open: e.target.value
