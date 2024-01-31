@@ -13,4 +13,9 @@ module.exports = merge(common, {
 		minimize: true,
 		minimizer: [new TerserWebpackPlugin(), new CssMinimizerPlugin()],
 	},
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
+	}
 });
