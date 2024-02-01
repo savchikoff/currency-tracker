@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+
 const MapContainer = styled.div`
-	color: #030304;
-	width: 100%;
 	height: 400px;
 
-	@media (max-width: 500px) {
+	@media (max-width: ${smallScreen}) {
 		height: 300px;
 	}
 `;

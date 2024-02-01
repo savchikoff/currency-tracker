@@ -1,117 +1,138 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.footer`
-	display: flex;
-	flex-direction: column;
-	padding: 40px 0;
-	gap: 56px;
+const dfc = ({ theme }) => theme.theme.displayValues.dfc;
+const df = ({ theme }) => theme.theme.displayValues.df;
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const s12 = ({ theme }) => theme.theme.sizes.s12;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s18 = ({ theme }) => theme.theme.sizes.s18;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s24 = ({ theme }) => theme.theme.sizes.s24;
+const s28 = ({ theme }) => theme.theme.sizes.s18;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const s40 = ({ theme }) => theme.theme.sizes.s40;
+const s48 = ({ theme }) => theme.theme.sizes.s48;
+const s56 = ({ theme }) => theme.theme.sizes.s56;
+const s64 = ({ theme }) => theme.theme.sizes.s64;
+const s128 = ({ theme }) => theme.theme.sizes.s128;
+const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
+const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
+const fontSemiBold = ({ theme }) => theme.theme.fontWeights.semiBold;
+const fontLight = ({ theme }) => theme.theme.fontWeights.light;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const xLargeScreen = ({ theme }) => theme.theme.breakpoints.xLarge;
+const center = ({ theme }) => theme.theme.additionalValues.center;
+const none = ({ theme }) => theme.theme.additionalValues.none;
+const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
+const font = ({ theme }) => theme.theme.fonts.inter;
 
-	@media (max-width: 1200px) {
-		gap: 32px;
+export const FooterContainer = styled.footer`
+	${dfc};
+	padding: ${s40} ${s0};
+	gap: ${s56};
+
+	@media (max-width: ${largeScreen}) {
+		gap: ${s32};
 	}
 `;
 
 export const FooterWrapper = styled.div`
-	display: flex;
+	${df};
 	justify-content: space-between;
-	@media (max-width: 1200px) {
-		justify-content: center;
+	@media (max-width: ${largeScreen}) {
+		justify-content: ${center};
 	}
 `;
 
 export const FooterInfo = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 18px;
+	${dfc};
+	gap: ${s18};
 	max-width: 482px;
-	@media (max-width: 1440px) {
+	@media (max-width: ${xLargeScreen}}) {
 		max-width: 400px;
 	}
 `;
 
 export const FooterTitle = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 18px;
+	${df};
+	align-items: ${center};
+	gap: ${s18};
 `;
 
 export const FooterLogo = styled.img`
-	user-select: none;
+	user-select: ${none};
 
-	@media (max-width: 768px) {
-		height: 32px;
+	@media (max-width: ${mediumScreen}) {
+		height: ${s32};
 	}
 `;
 
 export const FooterHeader = styled.h3`
-	font-size: 28px;
-	font-weight: 600;
-	background: linear-gradient(
-		90deg,
-		#00ce2c 0.18%,
-		#aedf23 49.3%,
-		#a3dc00 99.88%
-	);
+	font-size: ${s28};
+	font-weight: ${fontSemiBold};
+	background: ${greenGradient};
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	@media (max-width: 1440px) {
-		font-size: 24px;
+	-webkit-text-fill-color: ${transparent};
+	@media (max-width: ${xLargeScreen}) {
+		font-size: ${s24};
 	}
 
-	@media (max-width: 768px) {
-		font-size: 16px;
+	@media (max-width: ${mediumScreen}) {
+		font-size: ${s16};
 	}
 `;
 
 export const FooterText = styled.p`
-	font-size: 24px;
-	color: ${({ theme }) => theme.theme.themeColors.text};
-	font-weight: 300;
-	@media (max-width: 1440px) {
-		font-size: 16px;
+	font-size: ${s24};
+	color: ${themeTextColor};
+	font-weight: ${fontLight};
+	@media (max-width: ${xLargeScreen}) {
+		font-size: ${s16};
 	}
-	@media (max-width: 1200px) {
-		display: none;
+	@media (max-width: ${largeScreen}) {
+		display: ${none};
 	}
 `;
 
 export const FooterNavigation = styled.div`
-	display: flex;
+	${df};
 	flex-wrap: wrap;
-	gap: 128px;
-	margin-left: 48px;
-	@media (max-width: 1440px) {
-		gap: 64px;
+	gap: ${s128};
+	margin-left: ${s48};
+	@media (max-width: ${xLargeScreen}) {
+		gap: ${s64};
 	}
-	@media (max-width: 1200px) {
-		display: none;
+	@media (max-width: ${largeScreen}) {
+		display: ${none};
 	}
 `;
 
 export const FooterAccordion = styled.div`
-	display: none;
+	display: ${none};
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${largeScreen}) {
 		display: block;
 	}
 `;
 
 export const Copyright = styled.div`
-	display: flex;
-	justify-content: center;
-	text-align: center;
+	${df};
+	justify-content: ${center};
+	text-align: ${center};
 	color: #898989;
-	font-size: 24px;
-	font-family: 'Inter', sans-serif;
-	@media (max-width: 1200px) {
-		font-size: 20px;
+	font-size: ${s24};
+	font-family: ${font};
+	@media (max-width: ${largeScreen}) {
+		font-size: ${s20};
 	}
 
-	@media (max-width: 768px) {
-		font-size: 16px;
+	@media (max-width: ${mediumScreen}) {
+		font-size: ${s16};
 	}
 
-	@media (max-width: 500px) {
-		font-size: 12px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
 	}
 `;

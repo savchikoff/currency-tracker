@@ -8,40 +8,48 @@ import {
 	fontWeights,
 	fonts,
 	width,
+	height,
 	additionalValues,
+	displayValues
 } from './styles';
 
 export const baseStyles = {
 	colors: {
-		...colors,
+		...colors
 	},
 	breakpoints: {
-		...breakpoints,
+		...breakpoints
 	},
 	containerSizes: {
-		...containerSizes,
+		...containerSizes
 	},
 	sizes: {
-		...sizes,
+		...sizes
 	},
 	positions: {
-		...positions,
+		...positions
 	},
 	imageSizes: {
-		...imageSizes,
+		...imageSizes
 	},
 	fontWeights: {
-		...fontWeights,
+		...fontWeights
 	},
 	fonts: {
-		...fonts,
+		...fonts
 	},
 	width: {
-		...width,
+		...width
+	},
+	height: {
+		...height
 	},
 	additionalValues: {
-		...additionalValues,
+		...additionalValues
 	},
+	displayValues: {
+		...displayValues
+	}
 };
 
 export const dark = {
@@ -50,6 +58,10 @@ export const dark = {
 	themeColors: {
 		background: colors.black,
 		text: colors.lightGray,
+		modalBg: colors.mirage,
+		modalBorder: colors.gravel,
+		headerGradient: "linear-gradient(321deg, #00b03a 0%, rgba(1, 185, 61, 0.45) 100%)",
+		cardBg: colors.mirage
 	},
 };
 
@@ -59,5 +71,9 @@ export const light = {
 	themeColors: {
 		background: colors.white,
 		text: colors.black,
+		modalBg: colors.white,
+		modalBorder: colors.vibrantGreen,
+		headerGradient: "linear-gradient(311deg, #32c972 0%, #417b5c 100%)",
+		cardBg: colors.lightGreen
 	},
 };

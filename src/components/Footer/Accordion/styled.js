@@ -1,10 +1,27 @@
 import styled from 'styled-components';
 
+const dfc = ({ theme }) => theme.theme.displayValues.dfc;
+const df = ({ theme }) => theme.theme.displayValues.df;
+const s0 = ({ theme }) => theme.theme.sizes.s2;
+const s1 = ({ theme }) => theme.theme.sizes.s1;
+const s2 = ({ theme }) => theme.theme.sizes.s2;
+const s4 = ({ theme }) => theme.theme.sizes.s4;
+const s12 = ({ theme }) => theme.theme.sizes.s12;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s24 = ({ theme }) => theme.theme.sizes.s24;
+const fontNormal = ({ theme }) => theme.theme.fontWeights.normal;
+const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const gravelColor = ({ theme }) => theme.theme.colors.gravel;
+const monsoonColor = ({ theme }) => theme.theme.colors.monsoon;
+const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
+const center = ({ theme }) => theme.theme.additionalValues.center;
+
 export const Chevron = styled.div`
 	border-style: solid;
-	border-width: 2px 2px 0 0;
-	height: 4px;
-	width: 4px;
+	border-width: ${s2} ${s2} ${s0} ${s0};
+	height: ${s4};
+	width: ${s4};
 	transition: all 0.3s ease-in-out;
 
 	transform: ${(p) => p.direction === 'top' && 'rotate(-45deg)'};
@@ -14,45 +31,43 @@ export const Chevron = styled.div`
 `;
 
 export const Container = styled.div`
-	border-bottom: 1px solid #607d94;
+	border-bottom: ${s1} solid ${gravelColor};
 `;
 
 export const Links = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
+	${dfc};
+	gap: ${s24};
 	a {
-		color: #898989;
-		font-size: 20px;
-		font-weight: 400;
-		line-height: normal;
+		color: ${monsoonColor};
+		font-size: ${s20};
+		font-weight: ${fontNormal};
 		transition: all 0.3s ease;
 
 		&:hover {
-			color: #00bc4f;
+			color: ${mintGreenColor};
 		}
 	}
 
-	@media (max-width: 768px) {
-		gap: 12px;
+	@media (max-width: ${mediumScreen}) {
+		gap: ${s12};
 		a {
-			font-size: 16px;
+			font-size: ${s16};
 		}
 	}
 `;
 
 export const Title = styled.div`
-	display: flex;
-	align-items: center;
+	${df};
+	align-items: ${center};
 	justify-content: space-between;
-	font-size: 24px;
-	padding: 16px 0;
-	font-weight: 400;
+	font-size: ${s24};
+	padding: ${s16} ${s0};
+	font-weight: ${fontNormal};
 	cursor: pointer;
 
-	@media (max-width: 768px) {
-		font-size: 20px;
-		padding: 12px 0;
+	@media (max-width: ${mediumScreen}) {
+		font-size: ${s20};
+		padding: ${s12} ${s0};
 	}
 `;
 
@@ -63,6 +78,6 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-	padding: 0 0 16px;
+	padding: ${s0} ${s0} ${s16} ;
 	line-height: 1.5;
 `;

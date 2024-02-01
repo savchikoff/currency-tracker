@@ -1,35 +1,52 @@
 import styled from 'styled-components';
 
-export const NotificationWrapper = styled.div`
-	background: #202025;
-	padding: 16px;
-	min-width: 250px;
-	border-radius: 8px;
-	position: fixed;
-	top: 32px;
-	right: 24px;
-	border: 1px solid #474747;
 
-	@media (max-width: 768px) {
-		padding: 8px;
-		top: 20px;
-		right: 16px;
+const w250 = ({ theme }) => theme.theme.width.w250;
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const s1 = ({ theme }) => theme.theme.sizes.s1;
+const s8 = ({ theme }) => theme.theme.sizes.s8;
+const s12 = ({ theme }) => theme.theme.sizes.s12;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s24 = ({ theme }) => theme.theme.sizes.s24;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const posF = ({ theme }) => theme.theme.positions.posF;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const gravelColor = ({ theme }) => theme.theme.colors.gravel;
+const cardThemeColor = ({ theme }) => theme.theme.themeColors.cardBg;
+
+export const NotificationWrapper = styled.div`
+	background: ${cardThemeColor};
+	padding: ${s16};
+	min-width: ${w250};
+	border-radius: ${s8};
+	${posF};
+	z-index: 300;
+	top: ${s32};
+	right: ${s24};
+	border: ${s1} solid ${gravelColor};
+
+	@media (max-width: ${mediumScreen}) {
+		padding: ${s8};
+		top: ${s20};
+		right: ${s16};
 	}
 `;
 
 export const NotificationTitle = styled.h3`
-	margin: 0;
+	margin: ${s0};
 
-	@media (max-width: 500px) {
-		font-size: 12px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
 	}
 `;
 
 export const NotificationContent = styled.p`
-	margin: 0;
-	font-size: 16px;
+	margin: ${s0};
+	font-size: ${s16};
 
-	@media (max-width: 500px) {
-		font-size: 12px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
 	}
 `;

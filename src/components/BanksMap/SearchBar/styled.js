@@ -1,12 +1,32 @@
 import styled from 'styled-components';
 
-const s48 = ({ theme }) => theme.theme.sizes.s48;
+const dfc = ({ theme }) => theme.theme.displayValues.dfc;
 const w250 = ({ theme }) => theme.theme.width.w250;
+const wFull = ({ theme }) => theme.theme.width.wFull;
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const s1 = ({ theme }) => theme.theme.sizes.s1;
+const s2 = ({ theme }) => theme.theme.sizes.s2;
+const s8 = ({ theme }) => theme.theme.sizes.s8;
+const s12 = ({ theme }) => theme.theme.sizes.s12;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const s48 = ({ theme }) => theme.theme.sizes.s48;
+const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
+const themeBgColor = ({ theme }) => theme.theme.themeColors.background;
+const posA = ({ theme }) => theme.theme.positions.posA;
+const posR = ({ theme }) => theme.theme.positions.posR;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
+const gravelColor = ({ theme }) => theme.theme.colors.gravel;
+const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
+const none = ({ theme }) => theme.theme.additionalValues.none;
+const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
+const center = ({ theme }) => theme.theme.additionalValues.center;
 
 export const SearchContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	${dfc};
+	align-items: ${center};
 	margin-bottom: ${s48};
 `;
 
@@ -15,60 +35,53 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchInput = styled.input`
-	font-family: inherit;
-	font-weight: 300;
-	font-size: 20px;
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid #474747;
-	outline: 0;
-	color: #ffffff;
-	padding: 8px 0;
-	background: transparent;
+	font-family: ${inherit};
+	font-size: ${s20};
+	width: ${wFull};
+	border: ${none};
+	border-bottom: ${s2} solid ${gravelColor};
+	outline: ${s0};
+	color: ${themeTextColor};
+	padding: ${s8} ${s0};
+	background: ${transparent};
 	transition: border-color 0.2s;
+	${posR};
+	z-index: 2;
+
 	&:focus {
-		font-weight: 400;
-		border-image: linear-gradient(
-			90deg,
-			#00ce2c 0.18%,
-			#aedf23 49.3%,
-			#a3dc00 99.88%
-		);
+		border-image: ${greenGradient};
 		border-image-slice: 1;
 	}
 
-	position: relative;
-	z-index: 2;
-
-	@media (max-width: 500px) {
-		font-size: 12px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
 	}
 `;
 
 export const ResultListContainer = styled.div`
-	position: absolute;
+	${posA};
 	z-index: 1;
-	width: 250px;
+	width: ${w250};
 `;
 
 export const ResultList = styled.ul`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+	${dfc};
+	justify-content: ${center};
+	width: ${wFull};
+	list-style: ${none};
+	padding: ${s0};
+	margin: ${s0};
 `;
 
 export const ResultItem = styled.li`
-	font-size: 14px;
-	padding: 16px 32px;
-	border: 1px solid #474747;
-	background-color: #202025;
+	font-size: ${s16};
+	padding: ${s16} ${s32};
+	border: ${s1} solid ${gravelColor};
+	color: ${themeTextColor};
+	background-color: ${themeBgColor};
 
-	@media (max-width: 500px) {
-		font-size: 12px;
-		padding: 8px 16px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
+		padding: ${s8} ${s16};
 	}
 `;

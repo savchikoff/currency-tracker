@@ -1,22 +1,31 @@
 import styled from 'styled-components';
 
-export const TimelineContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 48px;
+const dfc = ({ theme }) => theme.theme.displayValues.dfc;
+const df = ({ theme }) => theme.theme.displayValues.df;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const s48 = ({ theme }) => theme.theme.sizes.s48;
+const s56 = ({ theme }) => theme.theme.sizes.s56;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const center = ({ theme }) => theme.theme.additionalValues.center;
 
-	@media (max-width: 768px) {
-		gap: 32px;
+export const TimelineContainer = styled.div`
+	${dfc};
+	gap: ${s48};
+
+	@media (max-width: ${largeScreen}) {
+		gap: ${s32};
 	}
 
-	@media (max-width: 500px) {
-		gap: 16px;
+	@media (max-width: ${smallScreen}) {
+		gap: ${s16};
 	}
 `;
 
 export const UpdateWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	min-height: 56px;
-	gap: 32px;
+	${df};
+	align-items: ${center};
+	min-height: ${s56};
+	gap: ${s32};
 `;

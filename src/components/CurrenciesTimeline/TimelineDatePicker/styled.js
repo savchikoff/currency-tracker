@@ -1,30 +1,39 @@
 import styled from 'styled-components';
 
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const s2 = ({ theme }) => theme.theme.sizes.s2;
+const s8 = ({ theme }) => theme.theme.sizes.s8;
+const s12 = ({ theme }) => theme.theme.sizes.s8;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
+const gravelColor = ({ theme }) => theme.theme.colors.gravel;
+const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
+const scheme = ({ theme }) => theme.theme.name;
+const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
+const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
+const none = ({ theme }) => theme.theme.additionalValues.none;
+
 const DatePicker = styled.input`
-	color-scheme: dark;
-	font-family: inherit;
-	font-size: 32px;
-	font-weight: 300;
-	border: none;
-	border-bottom: 2px solid #474747;
-	outline: 0;
-	font-size: 20px;
-	color: #ffffff;
-	padding: 8px 0;
-	background: transparent;
+	color-scheme: ${scheme};
+	font-family: ${inherit};
+	font-size: ${s32};
+	border: ${none};
+	border-bottom: ${s2} solid ${gravelColor};
+	outline: ${s0};
+	font-size: ${s20};
+	color: ${themeTextColor};
+	padding: ${s8} ${s0};
+	background: ${transparent};
 	transition: border-color 0.2s;
 	&:focus {
-		border-image: linear-gradient(
-			90deg,
-			#00ce2c 0.18%,
-			#aedf23 49.3%,
-			#a3dc00 99.88%
-		);
+		border-image: ${greenGradient};
 		border-image-slice: 1;
 	}
 
-	@media (max-width: 500px) {
-		font-size: 12px;
+	@media (max-width: ${smallScreen}) {
+		font-size: ${s12};
 	}
 `;
 

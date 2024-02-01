@@ -1,65 +1,83 @@
 import styled from 'styled-components';
 
-export const NavbarContainer = styled.nav`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-height: 112px;
+const s0 = ({ theme }) => theme.theme.sizes.s0;
+const s12 = ({ theme }) => theme.theme.sizes.s12;
+const s16 = ({ theme }) => theme.theme.sizes.s16;
+const s20 = ({ theme }) => theme.theme.sizes.s20;
+const s32 = ({ theme }) => theme.theme.sizes.s32;
+const s48 = ({ theme }) => theme.theme.sizes.s48;
+const s80 = ({ theme }) => theme.theme.sizes.s80;
+const s96 = ({ theme }) => theme.theme.sizes.s96;
+const s112 = ({ theme }) => theme.theme.sizes.s112;
+const img40 = ({ theme }) => theme.theme.imageSizes.img40;
+const df = ({ theme }) => theme.theme.displayValues.df;
+const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreenColor;
+const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const center = ({ theme }) => theme.theme.additionalValues.center;
+const none = ({ theme }) => theme.theme.additionalValues.none;
 
-	@media (max-width: 1200px) {
-		min-height: 96px;
+export const NavbarContainer = styled.nav`
+	${df};
+	align-items: ${center};
+	justify-content: space-between;
+	min-height: ${s112};
+
+	@media (max-width: ${largeScreen}) {
+		min-height: ${s96};
 	}
 
-	@media (max-width: 768px) {
-		min-height: 80px;
+	@media (max-width: ${mediumScreen}) {
+		min-height: ${s80};
 	}
 `;
 
 export const NavbarLogo = styled.img`
-	height: 40px;
-	user-select: none;
+	height: ${img40};
+	user-select: ${none};
 
-	@media (max-width: 768px) {
-		height: 32px;
+	@media (max-width: ${mediumScreen}) {
+		height: ${s32};
 	}
 `;
 
 export const NavbarLinks = styled.ul`
-	display: flex;
-	flex-wrap: wrap;
-	gap: 115px;
+	${df};
 	justify-content: space-between;
-	list-style-type: none;
+	flex-wrap: wrap;
+	gap: ${s112};
+	list-style-type: ${none};
 	transition: 0.3s;
-	padding: 0;
+	padding: ${s0};
 
 	a {
-		font-size: 20px;
+		font-size: ${s20};
 		transition: all 0.3s ease;
 		&:hover {
-			color: #00bc4f;
+			color: ${mintGreenColor};
 		}
 	}
 
 	.active {
-		color: #00bc4f;
+		color: ${mintGreenColor};
 	}
 
-	@media (max-width: 1200px) {
-		gap: 48px;
+	@media (max-width: ${largeScreen}) {
+		gap: ${s48};
 	}
 
-	@media (max-width: 768px) {
-		gap: 20px;
+	@media (max-width: ${mediumScreen}) {
+		gap: ${s20};
 		a {
-			font-size: 16px;
+			font-size: ${s16};
 		}
 	}
 
-	@media (max-width: 500px) {
-		gap: 16px;
+	@media (max-width: ${smallScreen}) {
+		gap: ${s16};
 		a {
-			font-size: 12px;
+			font-size: ${s12};
 		}
 	}
 `;
