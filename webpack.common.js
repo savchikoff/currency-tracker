@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const path = require('path');
 
@@ -46,7 +45,6 @@ module.exports = {
                 collapseWhitespace: true,
             },
         }),
-        new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        new CleanWebpackPlugin()
     ],
 };
