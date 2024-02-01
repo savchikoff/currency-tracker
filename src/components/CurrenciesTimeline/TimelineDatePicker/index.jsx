@@ -4,22 +4,19 @@ import PropTypes from 'prop-types';
 import DatePicker from './styled';
 
 export default class TimelineDatePicker extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-    constructor(props) {
-        super(props);
-    }
+	handleChangeDate = (e) => {
+		this.props.handleStartDateChange(e.target.valueAsNumber);
+	};
 
-    handleChangeDate = (e) => {
-        this.props.handleStartDateChange(e.target.valueAsNumber);
-    }
-
-    render() {
-        return (
-            <DatePicker type="date" onChange={this.handleChangeDate} />
-        )
-    }
+	render() {
+		return <DatePicker type="date" onChange={this.handleChangeDate} />;
+	}
 }
 
 TimelineDatePicker.propTypes = {
-    handleStartDateChange: PropTypes.func.isRequired
-}
+	handleStartDateChange: PropTypes.func.isRequired,
+};

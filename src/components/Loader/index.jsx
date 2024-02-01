@@ -1,13 +1,13 @@
-import { LoaderContainer, LoaderIcon } from "./styled";
-import GlobalStyles from "@styled";
+import { LoaderContainer, LoaderIcon } from './styled';
+import GlobalStyles from '@styled';
 
 const Loader = () => {
-    return (
-        <LoaderContainer>
-            <GlobalStyles />
-            <LoaderIcon />
-        </LoaderContainer>
-    )
-}
+	return (
+		<LoaderContainer>
+			<GlobalStyles />
+			<LoaderIcon />
+		</LoaderContainer>
+	);
+};
 
-export default Loader
+export default Loader;

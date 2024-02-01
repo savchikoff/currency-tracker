@@ -1,47 +1,47 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Label = styled.label`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
 `;
 
 export const Switch = styled.div`
-  position: relative;
-  width: 48px;
-  height: 19px;
-  background: #030304;
-  border-radius: 24px;
-  border: 1px solid #FFFFFF;
-  padding: 4px;
-  transition: 300ms all;
+	position: relative;
+	width: 48px;
+	height: 19px;
+	background: #030304;
+	border-radius: 24px;
+	border: 1px solid #ffffff;
+	padding: 4px;
+	transition: 300ms all;
 
-  &:before {
-    transition: 300ms all;
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 50%;
-    left: 4px;
-    background: #030304;
-    border: 1px solid #FFFFFF;
-    transform: translate(0, -50%);
-  }
+	&:before {
+		transition: 300ms all;
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		top: 50%;
+		left: 4px;
+		background: #030304;
+		border: 1px solid #ffffff;
+		transform: translate(0, -50%);
+	}
 `;
 
 export const Input = styled.input`
-  opacity: 0;
-  position: absolute;
+	opacity: 0;
+	position: absolute;
 
-  &:checked + ${Switch} {
-    background: green;
+	&:checked + ${Switch} {
+		background: green;
 
-    &:before {
-      transform: translate(26px, -50%);
-      background: #FFFFFF;
-    }
-  }
+		&:before {
+			transform: translate(26px, -50%);
+			background: #ffffff;
+		}
+	}
 `;

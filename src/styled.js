@@ -52,20 +52,20 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  margin: ${s0} ${auto};
-  padding: ${baseContainer};
+	margin: ${s0} ${auto};
+	padding: ${baseContainer};
 
-  @media(max-width: ${largeScreen}) {
-    padding: ${largeContainer};
-  }
+	@media (max-width: ${largeScreen}) {
+		padding: ${largeContainer};
+	}
 
-  @media(max-width: ${mediumScreen}) {
-    padding: ${mediumContainer};
-  }
+	@media (max-width: ${mediumScreen}) {
+		padding: ${mediumContainer};
+	}
 
-  @media(max-width: ${smallScreen}) {
-    padding: ${smallContainer};
-  }
+	@media (max-width: ${smallScreen}) {
+		padding: ${smallContainer};
+	}
 `;
 
 export default GlobalStyle;

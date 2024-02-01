@@ -1,36 +1,32 @@
-import { useEffect, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import PropTypes from "prop-types";
+import { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { readFromCache, writeToCache } from "../../utils/cache";
+import { readFromCache, writeToCache } from '../../utils/cache';
 
-import { dark, light } from "@constants/theme";
+import { dark, light } from '@constants/theme';
 
 const ThemeChanger = ({ children }) => {
-    const [theme, setTheme] = useState(dark);
+	const [theme, setTheme] = useState(dark);
 
-    useEffect(() => {
-        const cachedTheme = readFromCache("theme");
-        if (cachedTheme) {
-            const newTheme = cachedTheme === "dark" ? dark : light;
-            setTheme(newTheme);
-        } else {
-            writeToCache("theme", "dark");
-        }
-    }, []);
+	useEffect(() => {
+		const cachedTheme = readFromCache('theme');
+		if (cachedTheme) {
+			const newTheme = cachedTheme === 'dark' ? dark : light;
+			setTheme(newTheme);
+		} else {
+			writeToCache('theme', 'dark');
+		}
+	}, []);
 
-    return (
-        <ThemeProvider theme={{ theme, setTheme }}>
-            {children}
-        </ThemeProvider>
-    )
-}
+	return <ThemeProvider theme={{ theme, setTheme }}>{children}</ThemeProvider>;
+};
 
 ThemeChanger.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]).isRequired
-}
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]).isRequired,
+};
 
 export default ThemeChanger;
