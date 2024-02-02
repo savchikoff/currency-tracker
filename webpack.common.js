@@ -30,7 +30,7 @@ module.exports = {
 				use: 'babel-loader',
 			},
 			{
-				test: /\.(jpg|jpeg|png|svg|gif)$/,
+				test: /\.(jpg|jpeg|png|svg|gif|ico)$/,
 				type: 'asset/resource',
 			},
 			{
@@ -45,7 +45,7 @@ module.exports = {
 			minify: {
 				collapseWhitespace: true,
 			},
-			favicon: path.join(__dirname, 'public', 'favicon.ico')
+			favicon: "./src/assets/favicon.ico"
 		}),
 		new CleanWebpackPlugin(),
 		new DotenvWebpackPlugin({
