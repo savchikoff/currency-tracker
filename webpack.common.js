@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 const path = require('path');
 
@@ -44,7 +45,11 @@ module.exports = {
 			minify: {
 				collapseWhitespace: true,
 			},
+			favicon: path.join(__dirname, 'public', 'favicon.ico')
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new DotenvWebpackPlugin({
+			path: "./.env",
+		})
 	],
 };
