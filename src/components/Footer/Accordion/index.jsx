@@ -27,7 +27,7 @@ const Accordion = ({ columnName, links }) => {
 				{columnName}
 				<Chevron direction={isExpanded ? 'top' : 'bottom'} />
 			</Title>
-			<ContentWrapper maxHeight={contentHeight}>
+			<ContentWrapper maxheight={contentHeight}>
 				<Content ref={contentRef}>
 					<Links>
 						{links.map((link) => (

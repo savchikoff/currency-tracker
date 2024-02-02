@@ -40,6 +40,7 @@ export const HeaderContainer = styled.header`
 export const HeaderWrapper = styled.div`
 	${df};
 	gap: 90px;
+	align-items: center;
 	@media (max-width: ${largeScreen}) {
 		justify-content: ${center};
 	}
@@ -84,7 +85,9 @@ export const HeaderText = styled.p`
 `;
 
 export const HeaderImage = styled.img`
-	@media (max-width: ${smallScreen}) {
+	width: 300px;
+	height: 300px;
+	@media (max-width: ${mediumScreen}) {
 		display: ${none};
 	}
 `;

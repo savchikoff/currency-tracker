@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const dfc = ({ theme }) => theme.theme.displayValues.dfc;
 const df = ({ theme }) => theme.theme.displayValues.df;
-const s0 = ({ theme }) => theme.theme.sizes.s2;
+const s0 = ({ theme }) => theme.theme.sizes.s0;
 const s1 = ({ theme }) => theme.theme.sizes.s1;
 const s2 = ({ theme }) => theme.theme.sizes.s2;
 const s4 = ({ theme }) => theme.theme.sizes.s4;
@@ -72,7 +72,7 @@ export const Title = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-	max-height: ${(p) => `${p.maxHeight}px`};
+	max-height: ${(p) => `${p.maxheight}px`};
 	transition: max-height 0.3s ease-in-out;
 	overflow: hidden;
 `;

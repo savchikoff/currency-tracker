@@ -14,7 +14,9 @@ export const Navbar = () => {
 					{Object.keys(NAVIGATION).map((navItem) => {
 						const { path } = NAVIGATION[navItem];
 						return (
-							<NavLink activeClassName="active" to={path} key={navItem}>
+							<NavLink className={({ isActive }) =>
+								isActive ? "active" : ""}
+								to={path} key={navItem}>
 								{navItem}
 							</NavLink>
 						);

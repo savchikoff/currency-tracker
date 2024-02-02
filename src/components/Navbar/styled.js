@@ -11,8 +11,7 @@ const s96 = ({ theme }) => theme.theme.sizes.s96;
 const s112 = ({ theme }) => theme.theme.sizes.s112;
 const img40 = ({ theme }) => theme.theme.imageSizes.img40;
 const df = ({ theme }) => theme.theme.displayValues.df;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreenColor;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
 const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
 const center = ({ theme }) => theme.theme.additionalValues.center;
@@ -74,7 +73,7 @@ export const NavbarLinks = styled.ul`
 		}
 	}
 
-	@media (max-width: ${smallScreen}) {
+	@media (max-width: 570px) {
 		gap: ${s16};
 		a {
 			font-size: ${s12};

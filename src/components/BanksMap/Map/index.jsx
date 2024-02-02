@@ -5,7 +5,7 @@ import MapContainer from './styled';
 import { MAP_TOKEN, MAP_INITIAL_STATE, MAP_STYLE } from './config';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-mapboxgl.accessToken = MAP_TOKEN;
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
 
 export default class Map extends PureComponent {
 	constructor(props) {
@@ -42,8 +42,7 @@ export default class Map extends PureComponent {
 		const { banks } = this.props;
 		banks.forEach((bank) => {
 			const popUp = new mapboxgl.Popup({ offset: 25 }).setHTML(
-				`<h3>${bank.name}</h3><p>${
-					bank.address
+				`<h3>${bank.name}</h3><p>${bank.address
 				}</p><p>Available currencies: <br> ${bank.currencies.join(', ')}</p > `
 			);
 			const marker = new mapboxgl.Marker()

@@ -1,8 +1,11 @@
 import axios from 'axios';
 import { readFromCache, writeToCache } from './cache';
 
-const CURRENCY_API_KEY = 'cur_live_cycwWjf73O9cQNMx1Il61BknausXt7lRgE6CmZSb';
-const URL = `https://api.currencyapi.com/v3/latest?apikey=${CURRENCY_API_KEY}&currencies=USD%2CARS%2CCAD%2CJPY%2CAUD%2CCNY%2CEUR%2CBTC%2CLTC`;
+const CURRENCY_API_KEY = process.env.REACT_APP_CURRENCY_API_KEY;
+const CURRENCY_API_URL = process.env.REACT_APP_CURRENCY_API_URL;
+const CURRENCIES = "currencies=USD%2CARS%2CCAD%2CJPY%2CAUD%2CCNY%2CEUR%2CBTC%2CLTC";
+
+const URL = `${CURRENCY_API_URL}?apikey=${CURRENCY_API_KEY}&${CURRENCIES}`;
 
 const getNewData = async (cacheResponse = false, url = URL) => {
 	const { data } = await axios.get(url);
