@@ -31,6 +31,10 @@ export const Background = styled.div`
 	z-index: 50;
 `;
 
+export const CloseIcon = styled.img`
+	height: 24px;
+`
+
 export const Wrapper = styled.div`
 	background-color: ${modalBgColor};
 	border: ${s2} solid ${modalBorderColor};

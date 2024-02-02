@@ -9,6 +9,7 @@ import {
 	HeaderRow,
 	ScrollDisabler,
 	Content,
+	CloseIcon
 } from './styled';
 import closeIcon from '@assets/icons/close.svg';
 
@@ -37,10 +38,9 @@ const Modal = ({ isOpen, close, children }) => {
 			<Background>
 				<Wrapper ref={ref}>
 					<HeaderRow>
-						<img
+						<CloseIcon
 							src={closeIcon}
-							alt=""
-							style={{ cursor: 'pointer' }}
+							alt="close-icon"
 							onClick={close}
 						/>
 					</HeaderRow>

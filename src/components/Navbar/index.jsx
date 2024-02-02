@@ -1,6 +1,7 @@
 import { NavbarContainer, NavbarLinks, NavbarLogo } from './styled';
 import { Container } from '../../styled';
 import { NavLink } from 'react-router-dom';
+import BurgerMenu from "./Burger";
 import ToggleButton from '@components/Navbar/ToggleButton';
 import logo from '@assets/logotype.svg';
 import NAVIGATION from '@constants/navigation';
@@ -23,6 +24,7 @@ export const Navbar = () => {
 					})}
 				</NavbarLinks>
 				<ToggleButton />
+				<BurgerMenu />
 			</NavbarContainer>
 		</Container>
 	);

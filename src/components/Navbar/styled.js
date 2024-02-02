@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
+const df = ({ theme }) => theme.theme.displayValues.df;
 const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
 const s20 = ({ theme }) => theme.theme.sizes.s20;
 const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
 const s80 = ({ theme }) => theme.theme.sizes.s80;
 const s96 = ({ theme }) => theme.theme.sizes.s96;
 const s112 = ({ theme }) => theme.theme.sizes.s112;
 const img40 = ({ theme }) => theme.theme.imageSizes.img40;
-const df = ({ theme }) => theme.theme.displayValues.df;
 const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
 const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
@@ -63,20 +60,10 @@ export const NavbarLinks = styled.ul`
 	}
 
 	@media (max-width: ${largeScreen}) {
-		gap: ${s48};
+		gap: ${s32};
 	}
 
 	@media (max-width: ${mediumScreen}) {
-		gap: ${s20};
-		a {
-			font-size: ${s16};
-		}
-	}
-
-	@media (max-width: 570px) {
-		gap: ${s16};
-		a {
-			font-size: ${s12};
-		}
+		display: none;
 	}
 `;
