@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const DotenvWebpackPlugin = require("dotenv-webpack");
 
 const path = require('path');
 
@@ -46,9 +45,6 @@ module.exports = {
 				collapseWhitespace: true,
 			},
 		}),
-		new CleanWebpackPlugin(),
-		new DotenvWebpackPlugin({
-			path: "./.env",
-		})
+		new CleanWebpackPlugin()
 	],
 };
