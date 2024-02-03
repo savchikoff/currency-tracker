@@ -1,11 +1,20 @@
 import ButtonComponent from './styled';
+import PropTypes from 'prop-types';
 
-const Button = ({ onClick, children, isButtonDisabled }) => {
+const Button = ({ onClick, children, dataCy }) => {
 	return (
-		<ButtonComponent onClick={onClick} disabled={isButtonDisabled}>
+		<ButtonComponent data-cy={dataCy} onClick={onClick}>
 			{children}
 		</ButtonComponent>
 	);
 };
+
+Button.propTypes = {
+	onClick: PropTypes.func,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]).isRequired,
+}
 
 export default Button;

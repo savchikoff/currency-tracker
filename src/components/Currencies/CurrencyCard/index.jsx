@@ -8,9 +8,9 @@ import {
 	CardValue,
 } from './styled';
 
-const CurrencyCard = ({ name, img, alt, value, handleCardClick }) => {
+const CurrencyCard = ({ name, img, alt, value, handleCardClick, dataCy }) => {
 	return (
-		<CardContainer onClick={handleCardClick}>
+		<CardContainer data-cy={dataCy} onClick={handleCardClick}>
 			<CardWrapper>
 				<CardImage src={img} alt={alt} />
 				<CardTextContent>

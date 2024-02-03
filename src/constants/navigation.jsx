@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import ROUTES from '@constants/routes';
+import ROUTES from '../constants/routes';
 
 const Home = lazy(() => import('../pages/Home'));
 const Timeline = lazy(() => import('../pages/Timeline'));

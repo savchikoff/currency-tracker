@@ -5,14 +5,14 @@ import CurrenciesContainer from './styled';
 import CurrencyConvertorModal from '@components/Currencies/CurrencyConvertorModal';
 
 import { QUOTES_DATA, STOCKS_DATA, BASE_CURRENCY } from '@constants/currencies';
-import { getNewData, getCachedData } from '@utils/request';
+import { getCachedData, getNewData } from '@utils/request';
 import { isCacheValid } from '@utils/cache';
 
 const Currencies = () => {
 	const [isModalOpen, setModalOpen] = useState(false);
 
 	const [currencies, setCurrencies] = useState(getCachedData);
-	const [amount, setAmount] = useState(0);
+	const [amount, setAmount] = useState("");
 	const [chosenCurrency, setChosenCurrency] = useState(BASE_CURRENCY);
 
 	const getCurrenciesRates = async () => {
@@ -34,7 +34,7 @@ const Currencies = () => {
 	const handleConvertorModalOpen = (id, img) => {
 		setModalOpen(true);
 		setChosenCurrency({ id, img });
-		setAmount(0);
+		setAmount("");
 	};
 
 	const handleConvertorModalClose = () => {

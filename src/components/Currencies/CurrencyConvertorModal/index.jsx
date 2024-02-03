@@ -57,11 +57,12 @@ const CurrencyConvertorModal = ({
 	};
 
 	return (
-		<Modal isOpen={isOpen} close={close}>
+		<Modal isOpen={isOpen} close={close} dataCy="convertor-modal">
 			<AmountInput
 				value={amount}
 				onChange={handleChangeAmount}
 				placeholder={PLACEHOLDER}
+				data-cy="modal-convertor-input"
 			/>
 			<CurrenciesContainer>
 				<CurrentCurrency>
@@ -83,10 +84,10 @@ const CurrencyConvertorModal = ({
 					/>
 				</ConvertibleCurrency>
 			</CurrenciesContainer>
-			<ConvertedAmount>
+			<ConvertedAmount data-cy="converted-amount">
 				Converted amount: {convertedAmount} {targetCurrency.id}
 			</ConvertedAmount>
-			<Button onClick={handleConvert}>Convert</Button>
+			<Button dataCy="convertor-btn" onClick={handleConvert}>Convert</Button>
 		</Modal>
 	);
 };
@@ -95,7 +96,7 @@ CurrencyConvertorModal.propTypes = {
 	isOpen: PropTypes.bool.isRequired,
 	close: PropTypes.func.isRequired,
 	chosenCurrency: PropTypes.object.isRequired,
-	amount: PropTypes.number.isRequired,
+	amount: PropTypes.string.isRequired,
 	setAmount: PropTypes.func.isRequired,
 	currencies: PropTypes.object.isRequired,
 };

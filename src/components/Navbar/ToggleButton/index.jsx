@@ -18,7 +18,7 @@ const ToggleButton = () => {
 
 	return (
 		<Label>
-			<Input checked={isLightTheme} type="checkbox" onChange={toggleTheme} />
+			<Input data-cy="toggle-checkbox" checked={isLightTheme} type="checkbox" onChange={toggleTheme} />
 			<Switch />
 		</Label>
 	);

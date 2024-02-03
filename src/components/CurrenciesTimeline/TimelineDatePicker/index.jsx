@@ -13,7 +13,7 @@ export default class TimelineDatePicker extends Component {
 	};
 
 	render() {
-		return <DatePicker type="date" onChange={this.handleChangeDate} />;
+		return <DatePicker data-cy="date-picker" type="date" onChange={this.handleChangeDate} />;
 	}
 }
 

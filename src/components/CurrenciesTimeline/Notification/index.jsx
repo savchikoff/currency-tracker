@@ -29,7 +29,7 @@ export default class Notification extends Component {
 		return (
 			<>
 				{this.props.active && (
-					<NotificationWrapper>
+					<NotificationWrapper data-cy="notification">
 						<NotificationTitle>Chart status</NotificationTitle>
 						<NotificationContent>
 							✅ Your chart has been successfully built!

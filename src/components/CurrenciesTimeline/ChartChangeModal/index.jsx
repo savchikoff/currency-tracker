@@ -93,7 +93,7 @@ export default class ChartChangeModal extends Component {
 
 	render() {
 		return (
-			<Modal isOpen={this.props.isOpen} close={this.props.close}>
+			<Modal dataCy={this.props.dataCy} isOpen={this.props.isOpen} close={this.props.close}>
 				<ModalContainer>
 					<ModalWrapper>
 						<InputContainer>
@@ -101,6 +101,7 @@ export default class ChartChangeModal extends Component {
 							<SelectInput
 								onChange={this.handleSelectChange}
 								value={this.state.selectedDate}
+								data-cy="date-timeline-select"
 							>
 								{this.props.data.map(({ x }) => {
 									const stringDate = x.toDateString();
@@ -117,6 +118,7 @@ export default class ChartChangeModal extends Component {
 							<TextInput
 								value={this.state.high}
 								onChange={this.handleHighChange}
+								data-cy="high-input"
 							/>
 						</InputContainer>
 						<InputContainer>
@@ -124,6 +126,7 @@ export default class ChartChangeModal extends Component {
 							<TextInput
 								value={this.state.close}
 								onChange={this.handleCloseChange}
+								data-cy="close-input"
 							/>
 						</InputContainer>
 						<InputContainer>
@@ -131,6 +134,7 @@ export default class ChartChangeModal extends Component {
 							<TextInput
 								value={this.state.open}
 								onChange={this.handleOpenChange}
+								data-cy="open-input"
 							/>
 						</InputContainer>
 						<InputContainer>
@@ -138,10 +142,11 @@ export default class ChartChangeModal extends Component {
 							<TextInput
 								value={this.state.low}
 								onChange={this.handleLowChange}
+								data-cy="low-input"
 							/>
 						</InputContainer>
 						<ErrorLabel>{this.state.error}</ErrorLabel>
-						<Button onClick={this.handleDataChange}>Change chart</Button>
+						<Button dataCy="chart-change-btn" onClick={this.handleDataChange}>Change chart</Button>
 					</ModalWrapper>
 				</ModalContainer>
 			</Modal>

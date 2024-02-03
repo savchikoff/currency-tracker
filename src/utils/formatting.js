@@ -12,7 +12,7 @@ const monthNames = [
 	'November',
 ];
 
-export const formatTime = (time) => (time > 9 ? time : `0${time}`);
+export const formatTime = (time) => time > 9 ? time.toString() : `0${time}`;
 
 export const formatDate = (date) => {
 	const parsedDate = new Date(Date.parse(date));
@@ -22,13 +22,13 @@ export const formatDate = (date) => {
 	const minutes = parsedDate.getMinutes();
 	const monthName = monthNames[monthIndex];
 
-	return `${day} ${monthName} ${formatTime(hours)}:${formatTime(minutes)}`;
+	return `${formatTime(day)} ${monthName} ${formatTime(hours)}:${formatTime(minutes)}`;
 };
 
-export const formatCurrencies = (currencies, id, value) => {
+export const formatCurrencies = (currencies, id) => {
 	if (currencies?.data?.[id]) {
 		const currencyValue = `$${Number(currencies.data[id].value.toFixed(6))}`;
 		return currencyValue;
 	}
-	return value || 'Not found';
+	return 'Not found';
 };

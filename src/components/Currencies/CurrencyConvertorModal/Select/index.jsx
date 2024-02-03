@@ -33,7 +33,7 @@ const Select = ({
 	};
 
 	return (
-		<Main>
+		<Main data-cy="modal-convertor-select">
 			<DropDownContainer>
 				<DropDownHeader onClick={toggleSelect}>
 					<CurrencyImage src={img} />
@@ -49,6 +49,7 @@ const Select = ({
 										<ListItem
 											key={id}
 											onClick={() => handleCurrencyClick(currency)}
+											data-cy={`modal-convertor-currency-${id}`}
 										>
 											<CurrencyImage src={img} />
 											<CurrencyName>{id}</CurrencyName>

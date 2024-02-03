@@ -33,6 +33,7 @@ const CurrencySection = ({
 							img={img}
 							alt={title}
 							value={formattedCurrencyRates[index]}
+							dataCy={`currency-card-${id}`}
 							handleCardClick={
 								isClickable
 									? () => handleConvertorModalOpen(id, img)

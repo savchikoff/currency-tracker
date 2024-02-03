@@ -10,12 +10,12 @@ export const Navbar = () => {
 	return (
 		<Container>
 			<NavbarContainer>
-				<NavbarLogo src={logo} alt="App Logo" />
-				<NavbarLinks>
+				<NavbarLogo data-cy="navbar-logo" src={logo} alt="app-logo" />
+				<NavbarLinks data-cy="navbar-links">
 					{Object.keys(NAVIGATION).map((navItem) => {
 						const { path } = NAVIGATION[navItem];
 						return (
-							<NavLink className={({ isActive }) =>
+							<NavLink data-cy={`nav-${navItem}`} className={({ isActive }) =>
 								isActive ? "active" : ""}
 								to={path} key={navItem}>
 								{navItem}

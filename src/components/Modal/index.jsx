@@ -15,7 +15,7 @@ import closeIcon from '@assets/icons/close.svg';
 
 const portalRoot = document.getElementById('portal-root');
 
-const Modal = ({ isOpen, close, children }) => {
+const Modal = ({ isOpen, close, children, dataCy }) => {
 	const ref = useRef();
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ const Modal = ({ isOpen, close, children }) => {
 	if (!isOpen) return null;
 	return ReactDOM.createPortal(
 		<>
-			<Background>
+			<Background data-cy={dataCy}>
 				<Wrapper ref={ref}>
 					<HeaderRow>
 						<CloseIcon
@@ -59,7 +59,7 @@ Modal.propTypes = {
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
-	]).isRequired,
+	]).isRequired
 };
 
 export default Modal;

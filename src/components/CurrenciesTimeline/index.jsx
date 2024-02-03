@@ -141,10 +141,10 @@ export default class CurrenciesTimeline extends Component {
 						/>
 						{isButtonsEnabled && (
 							<>
-								<Button onClick={this.handleChartChangeModalOpen}>
+								<Button dataCy="update-btn" onClick={this.handleChartChangeModalOpen}>
 									Update
 								</Button>
-								<Button onClick={this.handleRandomize}>Randomize</Button>
+								<Button dataCy="randomize-btn" onClick={this.handleRandomize}>Randomize</Button>
 							</>
 						)}
 					</UpdateWrapper>
@@ -155,6 +155,7 @@ export default class CurrenciesTimeline extends Component {
 					handleNotificationActive={this.handleNotificationActive}
 				/>
 				<ChartChangeModal
+					dataCy="chart-modal"
 					isOpen={this.state.isOpen}
 					close={this.handleChartChangeModalClose}
 					data={this.state.chartData}

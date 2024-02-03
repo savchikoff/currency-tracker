@@ -51,6 +51,7 @@ export default class CurrenciesChart extends Component {
 					series={this.state.series}
 					type="candlestick"
 					height={350}
+					data-cy="currencies-chart"
 				/>
 			)
 		);
