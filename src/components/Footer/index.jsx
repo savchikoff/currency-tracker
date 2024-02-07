@@ -13,7 +13,7 @@ import {
 	FooterText,
 	Copyright,
 } from './styled';
-import { Container } from '../../styled';
+import Container from '@styled';
 
 import logo from '@assets/logotype.svg';
 

@@ -11,21 +11,18 @@ const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
 const gravelColor = ({ theme }) => theme.theme.colors.gravel;
 const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
 const scheme = ({ theme }) => theme.theme.name;
-const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
-const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
-const none = ({ theme }) => theme.theme.additionalValues.none;
 
 const DatePicker = styled.input`
 	color-scheme: ${scheme};
-	font-family: ${inherit};
+	font-family: inherit;
 	font-size: ${s32};
-	border: ${none};
+	border: none;
 	border-bottom: ${s2} solid ${gravelColor};
 	outline: ${s0};
 	font-size: ${s20};
 	color: ${themeTextColor};
 	padding: ${s8} ${s0};
-	background: ${transparent};
+	background: transparent;
 	transition: border-color 0.2s;
 	&:focus {
 		border-image: ${greenGradient};

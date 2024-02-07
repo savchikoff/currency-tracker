@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
 const s0 = ({ theme }) => theme.theme.sizes.s0;
 const s2 = ({ theme }) => theme.theme.sizes.s2;
 const s8 = ({ theme }) => theme.theme.sizes.s8;
@@ -14,17 +13,14 @@ const coralRedColor = ({ theme }) => theme.theme.colors.coralRed;
 const gravelColor = ({ theme }) => theme.theme.colors.gravel;
 const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
 const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const center = ({ theme }) => theme.theme.additionalValues.center;
-const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
-const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
-const none = ({ theme }) => theme.theme.additionalValues.none;
 
 export const ModalContainer = styled.div``;
 
 export const ModalWrapper = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	gap: ${s16};
-	align-items: ${center};
+	align-items: center;
 
 	@media (max-width: ${smallScreen}) {
 		gap: ${s8};
@@ -34,7 +30,7 @@ export const ModalWrapper = styled.div`
 export const InputContainer = styled.div`
 display: flex;
 flex-direction: column;
-	align-items: ${center};
+	align-items: center;
 `;
 
 export const InputLabel = styled.label`
@@ -44,7 +40,7 @@ export const InputLabel = styled.label`
 `;
 
 export const ErrorLabel = styled.div`
-	text-align: ${center};
+	text-align: center;
 	color: ${coralRedColor};
 	text-wrap: balance;
 	@media (max-width: ${smallScreen}) {
@@ -53,15 +49,15 @@ export const ErrorLabel = styled.div`
 `;
 
 export const TextInput = styled.input`
-	font-family: ${inherit};
+	font-family: inherit;
 	font-weight: ${fontLight};
 	font-size: ${s20};
-	border: ${none};
+	border: none;
 	border-bottom: ${s2} solid ${gravelColor};
 	outline: ${s0};
 	color: ${themeTextColor};
 	padding: ${s8} ${s0};
-	background: ${transparent};
+	background: transparent;
 	transition: border-color 0.2s;
 
 	&:focus {
@@ -75,15 +71,15 @@ export const TextInput = styled.input`
 `;
 
 export const SelectInput = styled.select`
-	font-family: ${inherit};
+	font-family: inherit;
 	font-weight: ${fontLight};
 	font-size: ${s20};
-	border: ${none};
+	border: none;
 	border-bottom: ${s2} solid ${gravelColor};
 	outline: ${s0};
 	color: ${themeTextColor};
 	padding: ${s8} ${s0};
-	background: ${transparent};
+	background: transparent;
 	transition: border-color 0.2s;
 
 	&:focus {

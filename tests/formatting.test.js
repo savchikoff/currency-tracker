@@ -1,5 +1,6 @@
-import { formatDate, formatCurrencies, formatTime } from "../src/utils/formatting";
 import CURRENCY_DATA from "../src/components/Currencies/mockData";
+import formatCurrencies from "../src/helpers/formatCurrencies"
+import formatDate, { formatTime } from "../src/helpers/formatDate";
 
 describe('formatTime', () => {
     it('should format a single-digit hour correctly', () => {

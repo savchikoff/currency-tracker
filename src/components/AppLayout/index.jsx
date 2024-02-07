@@ -1,4 +1,4 @@
-import GlobalStyle, { Container } from '../../styled';
+import GlobalStyle from '@GlobalStyles/styled';
 import { Navbar } from '@components/Navbar';
 import Header from '@components/Header';
 import Footer from '@components/Footer';

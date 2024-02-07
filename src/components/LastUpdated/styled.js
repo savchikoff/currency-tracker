@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const df = ({ theme }) => theme.theme.displayValues.df;
-const dib = ({ theme }) => theme.theme.displayValues.dib;
 const s0 = ({ theme }) => theme.theme.sizes.s0;
 const s2 = ({ theme }) => theme.theme.sizes.s2;
 const s4 = ({ theme }) => theme.theme.sizes.s4;
@@ -11,20 +9,15 @@ const s24 = ({ theme }) => theme.theme.sizes.s24;
 const s32 = ({ theme }) => theme.theme.sizes.s32;
 const s48 = ({ theme }) => theme.theme.sizes.s48;
 const s64 = ({ theme }) => theme.theme.sizes.s64;
-const img24 = ({ theme }) => theme.theme.imageSizes.img24;
-const img40 = ({ theme }) => theme.theme.imageSizes.img40;
-const posR = ({ theme }) => theme.theme.positions.posR;
-const posA = ({ theme }) => theme.theme.positions.posA;
 const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const center = ({ theme }) => theme.theme.additionalValues.center;
 const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
 const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
 
 export const LastUpdatedContainer = styled.div`
-	${df};
-	align-items: ${center};
-	justify-content: ${center};
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: ${s64} ${s0};
 	gap: ${s24};
 
@@ -42,20 +35,20 @@ export const LastUpdatedContainer = styled.div`
 `;
 
 export const BlinkingDot = styled.span`
-	${dib};
-	width: ${img40};
-	height: ${img40};
-	${posR};
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	position: relative;
 
 	&::after,
 	&::before {
 		content: '';
 		box-sizing: border-box;
-		width: ${img40};
-		height: ${img40};
+		width: 40px;
+		height: 40px;
 		border-radius: 50%;
 		border: ${s4} solid ${mintGreenColor};
-		${posA};
+		position: absolute;
 		left: ${s0};
 		top: ${s0};
 		animation: scaling 2s linear infinite;
@@ -77,12 +70,12 @@ export const BlinkingDot = styled.span`
 	}
 
 	@media (max-width: ${smallScreen}) {
-		width: ${img24};
-		height: ${img24};
+		width: 24px;
+		height: 24px;
 		&::after,
 		&::before {
-			width: ${img24};
-			height: ${img24};
+			width: 24px;
+			height: 24px;
 			border: ${s2} solid ${mintGreenColor};
 		}
 	}

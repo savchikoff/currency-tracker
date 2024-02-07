@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
 import { Label, Input, Switch } from './styled';
-import { dark, light } from '@constants/theme';
-import { writeToCache } from '@utils/cache';
+import { dark, light } from '@theme/theme';
+import { writeToCache } from '@helpers/cache';
 
 const ToggleButton = () => {
 	const { theme, setTheme } = useContext(ThemeContext);

@@ -14,7 +14,8 @@
 		"sourceType": "module"
 	},
 	"plugins": [
-		"react"
+		"react",
+		"simple-import-sort"
 	],
 	"settings": {
 		"import/resolver": {
@@ -35,6 +36,8 @@
 				"devDependencies": true
 			}
 		],
-		"cypress/unsafe-to-chain-command": "off"
+		"cypress/unsafe-to-chain-command": "off",
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error"
 	}
 }

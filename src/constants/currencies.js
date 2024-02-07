@@ -1,14 +1,14 @@
-import bovespa from '../assets/icons/BOVESPA.svg';
-import ifix from '../assets/icons/IFIX.svg';
-import dollar from '../assets/icons/USD.svg';
 import peso from '../assets/icons/ARS.svg';
-import canadianDollar from '../assets/icons/CAD.svg';
-import yen from '../assets/icons/JPY.svg';
 import australianDollar from '../assets/icons/AUD.svg';
+import bovespa from '../assets/icons/BOVESPA.svg';
+import bitcoin from '../assets/icons/BTC.svg';
+import canadianDollar from '../assets/icons/CAD.svg';
 import yuan from '../assets/icons/CNY.svg';
 import euro from '../assets/icons/EUR.svg';
-import bitcoin from '../assets/icons/BTC.svg';
+import ifix from '../assets/icons/IFIX.svg';
+import yen from '../assets/icons/JPY.svg';
 import libra from '../assets/icons/LIBRA.svg';
+import dollar from '../assets/icons/USD.svg';
 
 export const STOCKS_DATA = [
     {
@@ -20,11 +20,6 @@ export const STOCKS_DATA = [
         img: ifix
     },
 ];
-
-export const BASE_CURRENCY = {
-    id: 'USD',
-    img: dollar,
-};
 
 export const QUOTES_DATA = [
     {
@@ -73,3 +68,5 @@ export const QUOTES_DATA = [
         title: 'Libra',
     },
 ];
+
+export const BASE_CURRENCY = QUOTES_DATA[0];

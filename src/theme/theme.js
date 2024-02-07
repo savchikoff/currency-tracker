@@ -1,17 +1,9 @@
 import {
 	breakpoints,
-	containerSizes,
-	sizes,
 	colors,
-	positions,
-	imageSizes,
 	fontWeights,
-	fonts,
-	width,
-	height,
-	additionalValues,
-	displayValues
-} from './styles';
+	sizes
+} from '../constants/styles';
 
 export const baseStyles = {
 	colors: {
@@ -20,35 +12,11 @@ export const baseStyles = {
 	breakpoints: {
 		...breakpoints
 	},
-	containerSizes: {
-		...containerSizes
-	},
 	sizes: {
 		...sizes
 	},
-	positions: {
-		...positions
-	},
-	imageSizes: {
-		...imageSizes
-	},
 	fontWeights: {
 		...fontWeights
-	},
-	fonts: {
-		...fonts
-	},
-	width: {
-		...width
-	},
-	height: {
-		...height
-	},
-	additionalValues: {
-		...additionalValues
-	},
-	displayValues: {
-		...displayValues
 	}
 };
 
@@ -60,7 +28,7 @@ export const dark = {
 		text: colors.lightGray,
 		modalBg: colors.mirage,
 		modalBorder: colors.gravel,
-		headerGradient: "linear-gradient(321deg, #00b03a 0%, rgba(1, 185, 61, 0.45) 100%)",
+		headerGradient: colors.darkThemeHeaderGradient,
 		cardBg: colors.mirage
 	},
 };
@@ -73,7 +41,7 @@ export const light = {
 		text: colors.black,
 		modalBg: colors.white,
 		modalBorder: colors.vibrantGreen,
-		headerGradient: "linear-gradient(311deg, #32c972 0%, #417b5c 100%)",
+		headerGradient: colors.lightThemeHeaderGradient,
 		cardBg: colors.lightGreen
 	},
 };

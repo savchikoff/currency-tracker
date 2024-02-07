@@ -6,7 +6,7 @@ import {
 	HeaderImage,
 	HeaderText,
 } from './styled';
-import { Container } from '../../styled';
+import Container from '@styled';
 import diagram from '@assets/diagram.svg';
 
 const Header = () => {

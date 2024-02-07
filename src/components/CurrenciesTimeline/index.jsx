@@ -11,7 +11,7 @@ import { BASE_CURRENCY } from '@constants/currencies';
 
 import { TimelineContainer, UpdateWrapper } from './styled';
 
-import { randomizeDataWithCurrency } from '@utils/randomizer';
+import { randomizeDataWithCurrency } from '@helpers/randomizer';
 
 import observable from '../Observer';
 

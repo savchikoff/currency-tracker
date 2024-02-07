@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
-const df = ({ theme }) => theme.theme.displayValues.df;
 const s0 = ({ theme }) => theme.theme.sizes.s0;
 const s1 = ({ theme }) => theme.theme.sizes.s1;
 const s2 = ({ theme }) => theme.theme.sizes.s2;
@@ -15,7 +13,6 @@ const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const gravelColor = ({ theme }) => theme.theme.colors.gravel;
 const monsoonColor = ({ theme }) => theme.theme.colors.monsoon;
 const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const center = ({ theme }) => theme.theme.additionalValues.center;
 
 export const Chevron = styled.div`
 	border-style: solid;
@@ -35,7 +32,8 @@ export const Container = styled.div`
 `;
 
 export const Links = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	gap: ${s24};
 	a {
 		color: ${monsoonColor};
@@ -57,8 +55,8 @@ export const Links = styled.div`
 `;
 
 export const Title = styled.div`
-	${df};
-	align-items: ${center};
+	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	font-size: ${s24};
 	padding: ${s16} ${s0};

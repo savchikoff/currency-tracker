@@ -1,5 +1,5 @@
-import CACHE_LIFETIIME from '../constants/cache';
 import CURRENCY_DATA from '../components/Currencies/mockData';
+import CACHE_LIFETIIME from '../constants/cache';
 
 const readFromCache = (key) => {
     const storage = localStorage.getItem(key);
@@ -20,4 +20,4 @@ const isCacheValid = (data) => {
     return !isValid;
 };
 
-export { readFromCache, writeToCache, isCacheValid };
+export { isCacheValid,readFromCache, writeToCache };

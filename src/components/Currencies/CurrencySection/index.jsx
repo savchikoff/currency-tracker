@@ -6,7 +6,7 @@ import {
 	CurrencySectionHeader,
 } from './styled';
 import CurrencyCard from '@components/Currencies/CurrencyCard';
-import { formatCurrencies } from '@utils/formatting';
+import formatCurrencies from '@helpers/formatCurrencies';
 
 const CurrencySection = ({
 	header,

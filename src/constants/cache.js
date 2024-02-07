@@ -1,3 +1,3 @@
-const CACHE_LIFETIME = 86400000;
+const cacheLifetime = 86400000;
 
-export default CACHE_LIFETIME;
+export default cacheLifetime;

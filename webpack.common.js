@@ -17,9 +17,11 @@ module.exports = {
 			'@pages': path.resolve(__dirname, 'src/pages'),
 			'@assets': path.resolve(__dirname, 'src/assets'),
 			'@constants': path.resolve(__dirname, 'src/constants'),
-			'@utils': path.resolve(__dirname, 'src/utils'),
+			'@helpers': path.resolve(__dirname, 'src/helpers'),
 			'@hooks': path.resolve(__dirname, 'src/hooks'),
 			'@styled': path.resolve(__dirname, 'src/styled'),
+			'@GlobalStyles': path.resolve(__dirname, 'src/GlobalStyles'),
+			'@theme': path.resolve(__dirname, 'src/theme')
 		},
 	},
 	module: {

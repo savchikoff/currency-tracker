@@ -1,10 +1,5 @@
-import { lazy } from 'react';
 import ROUTES from '../constants/routes';
-
-const Home = lazy(() => import('../pages/Home'));
-const Timeline = lazy(() => import('../pages/Timeline'));
-const BankCard = lazy(() => import('../pages/BankCard'));
-const Contacts = lazy(() => import('../pages/Contacts'));
+import { Home, Timeline, BankCard, Contacts } from './routesComponents';
 
 const NAVIGATION = {
 	Home: {

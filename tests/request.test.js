@@ -1,7 +1,8 @@
 import axios from 'axios';
-import { getNewData, getCachedData } from '../src/utils/request';
-import * as cacheModule from '../src/utils/cache';
+
 import CURRENCY_DATA from "../src/components/Currencies/mockData";
+import * as cacheModule from '../src/helpers/cache';
+import { getCachedData, getNewData } from '../src/helpers/request';
 
 jest.mock('axios');
 jest.mock('../src/utils/cache');

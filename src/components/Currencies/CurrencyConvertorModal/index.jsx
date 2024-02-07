@@ -18,7 +18,7 @@ import Button from '@components/Button';
 import Modal from '@components/Modal';
 
 import { BASE_CURRENCY } from '@constants/currencies';
-import convertCurrency from '@utils/convertor';
+import convertCurrency from '@helpers/convertor';
 import Select from './Select';
 
 const PLACEHOLDER = 'Enter the amount';

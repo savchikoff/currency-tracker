@@ -6,26 +6,21 @@ const s12 = ({ theme }) => theme.theme.sizes.s12;
 const s8 = ({ theme }) => theme.theme.sizes.s8;
 const s16 = ({ theme }) => theme.theme.sizes.s16;
 const s32 = ({ theme }) => theme.theme.sizes.s32;
-const center = ({ theme }) => theme.theme.additionalValues.center;
-const inherit = ({ theme }) => theme.theme.additionalValues.inherit;
-const none = ({ theme }) => theme.theme.additionalValues.none;
-const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
-const posR = ({ theme }) => theme.theme.positions.posR;
 const vibrantGreenColor = ({ theme }) => theme.theme.colors.vibrantGreen;
 const whiteColor = ({ theme }) => theme.theme.colors.white;
 const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
 
 
 const ButtonComponent = styled.button`
-	${posR};
+	position: relative;
 	display: inline-block;
-	font-family: ${inherit};
+	font-family: inherit;
 	padding: ${s16} ${s32};
-	text-align: ${center};
+	text-align: center;
 	letter-spacing: ${s1};
-	text-decoration: ${none};
+	text-decoration: none;
 	color: ${vibrantGreenColor};
-	background: ${transparent};
+	background: transparent;
 	cursor: pointer;
 	transition: ease-out 0.5s;
 	border: ${s2} solid ${vibrantGreenColor};

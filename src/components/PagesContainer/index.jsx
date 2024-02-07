@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Container } from '../../styled';
+import Container from '@styled';
 
 const PagesContainer = () => {
 	return (

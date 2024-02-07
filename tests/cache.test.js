@@ -1,10 +1,11 @@
 import MockDate from 'mockdate';
-import {
-    readFromCache,
-    writeToCache,
-    isCacheValid
-} from '../src/utils/cache';
+
 import CURRENCY_DATA from "../src/components/Currencies/mockData";
+import {
+    isCacheValid,
+    readFromCache,
+    writeToCache
+} from '../src/helpers/cache';
 
 const mockDate = '2024-01-01T00:00:00Z';
 const mockData = { meta: { last_updated_at: '2023-12-01T12:00:00Z' } };

@@ -2,9 +2,7 @@ import Currencies from '@components/Currencies';
 
 const Home = () => {
 	return (
-		<>
-			<Currencies />
-		</>
+		<Currencies />
 	);
 };
 

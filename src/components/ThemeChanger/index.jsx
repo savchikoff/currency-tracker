@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { readFromCache, writeToCache } from '../../utils/cache';
+import { readFromCache, writeToCache } from '@helpers/cache';
 
-import { dark, light } from '@constants/theme';
+import { dark, light } from '@theme/theme';
 
 const ThemeChanger = ({ children }) => {
 	const [theme, setTheme] = useState(dark);

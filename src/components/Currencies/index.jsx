@@ -5,8 +5,8 @@ import CurrenciesContainer from './styled';
 import CurrencyConvertorModal from '@components/Currencies/CurrencyConvertorModal';
 
 import { QUOTES_DATA, STOCKS_DATA, BASE_CURRENCY } from '@constants/currencies';
-import { getCachedData, getNewData } from '@utils/request';
-import { isCacheValid } from '@utils/cache';
+import { getCachedData, getNewData } from '@helpers/request';
+import { isCacheValid } from '@helpers/cache';
 
 const Currencies = () => {
 	const [isModalOpen, setModalOpen] = useState(false);

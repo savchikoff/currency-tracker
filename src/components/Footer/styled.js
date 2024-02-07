@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
-const df = ({ theme }) => theme.theme.displayValues.df;
 const s0 = ({ theme }) => theme.theme.sizes.s0;
 const s12 = ({ theme }) => theme.theme.sizes.s12;
 const s16 = ({ theme }) => theme.theme.sizes.s16;
@@ -23,13 +21,10 @@ const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
 const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
 const xLargeScreen = ({ theme }) => theme.theme.breakpoints.xLarge;
-const center = ({ theme }) => theme.theme.additionalValues.center;
-const none = ({ theme }) => theme.theme.additionalValues.none;
-const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
-const font = ({ theme }) => theme.theme.fonts.inter;
 
 export const FooterContainer = styled.footer`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	padding: ${s40} ${s0};
 	gap: ${s56};
 
@@ -39,15 +34,16 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterWrapper = styled.div`
-	${df};
+	display: flex;
 	justify-content: space-between;
 	@media (max-width: ${largeScreen}) {
-		justify-content: ${center};
+		justify-content: center;
 	}
 `;
 
 export const FooterInfo = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	gap: ${s18};
 	max-width: 482px;
 	@media (max-width: ${xLargeScreen}}) {
@@ -56,13 +52,13 @@ export const FooterInfo = styled.div`
 `;
 
 export const FooterTitle = styled.div`
-	${df};
-	align-items: ${center};
+	display: flex;
+	align-items: center;
 	gap: ${s18};
 `;
 
 export const FooterLogo = styled.img`
-	user-select: ${none};
+	user-select: none;
 
 	@media (max-width: ${mediumScreen}) {
 		height: ${s32};
@@ -74,7 +70,7 @@ export const FooterHeader = styled.h3`
 	font-weight: ${fontSemiBold};
 	background: ${greenGradient};
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: ${transparent};
+	-webkit-text-fill-color: transparent;
 	@media (max-width: ${xLargeScreen}) {
 		font-size: ${s24};
 	}
@@ -92,12 +88,12 @@ export const FooterText = styled.p`
 		font-size: ${s16};
 	}
 	@media (max-width: ${largeScreen}) {
-		display: ${none};
+		display: none;
 	}
 `;
 
 export const FooterNavigation = styled.div`
-	${df};
+	display: flex;
 	flex-wrap: wrap;
 	gap: ${s128};
 	margin-left: ${s48};
@@ -105,12 +101,12 @@ export const FooterNavigation = styled.div`
 		gap: ${s64};
 	}
 	@media (max-width: ${largeScreen}) {
-		display: ${none};
+		display: none;
 	}
 `;
 
 export const FooterAccordion = styled.div`
-	display: ${none};
+	display: none;
 
 	@media (max-width: ${largeScreen}) {
 		display: block;
@@ -118,12 +114,12 @@ export const FooterAccordion = styled.div`
 `;
 
 export const Copyright = styled.div`
-	${df};
-	justify-content: ${center};
-	text-align: ${center};
+	display: flex;
+	justify-content: center;
+	text-align: center;
 	color: #898989;
 	font-size: ${s24};
-	font-family: ${font};
+	font-family: 'Inter', sans-serif;
 	@media (max-width: ${largeScreen}) {
 		font-size: ${s20};
 	}

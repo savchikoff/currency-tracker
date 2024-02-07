@@ -5,13 +5,6 @@ export const breakpoints = {
 	xLarge: "1440px",
 };
 
-export const containerSizes = {
-	base: "0 121px",
-	large: "0 96px",
-	medium: "0 64px",
-	small: "0 32px",
-};
-
 export const sizes = {
 	s0: 0,
 	s1: "1px",
@@ -50,23 +43,10 @@ export const colors = {
 	monsoon: "#898989",
 	lightGray: "#D9D9D9",
 	greenGradient: "linear-gradient(90.18deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)",
-	redGradient: "linear-gradient(91deg, #ce0000 0.64%, #c65d2f 29.15%, #d11616 99.51%)"
+	redGradient: "linear-gradient(91deg, #ce0000 0.64%, #c65d2f 29.15%, #d11616 99.51%)",
+	darkThemeHeaderGradient: "linear-gradient(321deg, #00b03a 0%, rgba(1, 185, 61, 0.45) 100%)",
+	lightThemeHeaderGradient: "linear-gradient(311deg, #32c972 0%, #417b5c 100%)"
 
-};
-
-export const positions = {
-	posA: "position: absolute",
-	posF: "position: fixed",
-	posR: "position: relative",
-};
-
-export const imageSizes = {
-	img20: "20px",
-	img24: "24px",
-	img30: "30px",
-	img40: "40px",
-	img60: "60px",
-	img120: "120px",
 };
 
 export const fontWeights = {
@@ -75,34 +55,3 @@ export const fontWeights = {
 	semiBold: 600,
 	bold: 700,
 };
-
-export const width = {
-	w250: "250px",
-	w48: "48px",
-	wFull: "100%",
-	wView: "100vw",
-};
-
-export const height = {
-	hView: "100vh"
-}
-
-export const fonts = {
-	poppins: "'Poppins', sans-serif",
-	inter: "'Inter', sans-serif"
-};
-
-export const additionalValues = {
-	inherit: "inherit",
-	none: "none",
-	auto: "auto",
-	transparent: "transparent",
-	center: "center"
-};
-
-export const displayValues = {
-	df: "display: flex",
-	dg: "display: grid",
-	dfc: "display: flex; flex-direction: column",
-	dib: "display: inline-block"
-}

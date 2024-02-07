@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
-const dg = ({ theme }) => theme.theme.displayValues.dg;
 const s2 = ({ theme }) => theme.theme.sizes.s2;
 const s12 = ({ theme }) => theme.theme.sizes.s12;
 const s16 = ({ theme }) => theme.theme.sizes.s16;
@@ -17,7 +15,8 @@ const fontLight = ({ theme }) => theme.theme.fontWeights.light;
 const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
 
 export const CurrencySectionContainer = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 `;
 
 export const CurrencySectionHeader = styled.span`
@@ -43,13 +42,14 @@ export const CurrencySectionHeader = styled.span`
 `;
 
 export const CurrencySectionCards = styled.div`
-	${dg};
+	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 184px;
 	row-gap: ${s56};
 
 	@media (max-width: ${largeScreen}) {
-		${dfc};
+		display: flex;
+		flex-direction: column;
 		gap: ${s16};
 	}
 `;

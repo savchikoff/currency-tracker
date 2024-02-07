@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { readFromCache, writeToCache } from './cache';
 
 const CURRENCY_API_KEY = process.env.REACT_APP_CURRENCY_API_KEY;
@@ -17,4 +18,4 @@ const getNewData = async (cacheResponse = false, url = URL) => {
 
 const getCachedData = (url = URL) => readFromCache(url);
 
-export { getNewData, getCachedData };
+export { getCachedData,getNewData };

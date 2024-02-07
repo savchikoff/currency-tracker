@@ -2,7 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { ErrorContainer, ErrorIcon, ErrorMessage } from './styled';
-import GlobalStyles from '@styled';
+import GlobalStyles from '@GlobalStyles/styled';
 
 import error from '@assets/icons/error.svg';
 

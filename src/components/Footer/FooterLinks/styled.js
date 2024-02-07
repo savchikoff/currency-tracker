@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
 const s24 = ({ theme }) => theme.theme.sizes.s28;
 const s28 = ({ theme }) => theme.theme.sizes.s28;
 const s40 = ({ theme }) => theme.theme.sizes.s40;
@@ -11,7 +10,8 @@ const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
 const monsoonColor = ({ theme }) => theme.theme.colors.monsoon;
 
 export const LinksColumn = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	gap: ${s40};
 `;
 
@@ -22,7 +22,8 @@ export const LinksHeader = styled.span`
 `;
 
 export const Links = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	gap: ${s28};
 
 	a {

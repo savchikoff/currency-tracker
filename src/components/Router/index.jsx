@@ -7,7 +7,7 @@ import Loader from '@components/Loader';
 import NAVIGATION from '@constants/navigation';
 import ROUTES from '@constants/routes';
 
-const NotFound = lazy(() => import('@pages/Error'));
+const NotFound = lazy(() => import('@pages/ErrorPage'));
 
 const Router = () => {
 	return (

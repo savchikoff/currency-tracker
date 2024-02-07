@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const df = ({ theme }) => theme.theme.displayValues.df;
-const dfc = ({ theme }) => theme.theme.displayValues.dfc;
 const s12 = ({ theme }) => theme.theme.sizes.s20;
 const s20 = ({ theme }) => theme.theme.sizes.s20;
 const s24 = ({ theme }) => theme.theme.sizes.s24;
@@ -17,9 +15,6 @@ const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
 const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
 const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
 const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const center = ({ theme }) => theme.theme.additionalValues.center;
-const transparent = ({ theme }) => theme.theme.additionalValues.transparent;
-const none = ({ theme }) => theme.theme.additionalValues.none;
 
 export const HeaderContainer = styled.header`
 	padding-top: ${s32};
@@ -38,19 +33,20 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderWrapper = styled.div`
-	${df};
+	display: flex;
 	gap: 90px;
 	align-items: center;
 	@media (max-width: ${largeScreen}) {
-		justify-content: ${center};
+		justify-content: center;
 	}
 `;
 
 export const HeaderTextContainer = styled.div`
-	${dfc};
+	display: flex;
+	flex-direction: column;
 	align-items: flex-end;
 	@media (max-width: ${largeScreen}) {
-		align-items: ${center};
+		align-items: center;
 	}
 `;
 
@@ -59,10 +55,10 @@ export const HeaderTitle = styled.h1`
 	text-align: right;
 	background: ${greenGradient};
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: ${transparent};
+	-webkit-text-fill-color: transparent;
 	@media (max-width: ${largeScreen}) {
 		font-size: ${s64};
-		text-align: ${center};
+		text-align: center;
 	}
 
 	@media (max-width: ${smallScreen}) {
@@ -74,7 +70,7 @@ export const HeaderText = styled.p`
 	font-size: ${s24};
 	font-weight: ${fontLight};
 	color: ${whiteColor};
-	text-align: ${center};
+	text-align: center;
 	@media (max-width: ${largeScreen}) {
 		font-size: ${s20};
 	}
@@ -88,6 +84,6 @@ export const HeaderImage = styled.img`
 	width: 300px;
 	height: 300px;
 	@media (max-width: ${mediumScreen}) {
-		display: ${none};
+		display: none;
 	}
 `;
