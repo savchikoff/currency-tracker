@@ -15,7 +15,7 @@ export default class CurrenciesTabs extends PureComponent {
 		super(props);
 	}
 
-	handleSetTabActive = (id, img) => {
+	handleSetTabActive = (id, img) => () => {
 		this.props.setSelectedCurrency({
 			selectedCurrency: { id, img },
 		});
@@ -29,7 +29,7 @@ export default class CurrenciesTabs extends PureComponent {
 						<Tab
 							key={id}
 							active={this.props.selectedCurrency.id === id ? 1 : 0}
-							onClick={() => this.handleSetTabActive(id, img)}
+							onClick={this.handleSetTabActive(id, img)}
 							data-cy={`currency-tab-${id}`}
 						>
 							<TabContent>

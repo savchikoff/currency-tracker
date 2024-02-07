@@ -99,7 +99,7 @@ export default class ChartChangeModal extends Component {
 							</SelectInput>
 						</InputContainer>
 						{inputFields.map(({ label, stateKey, dataCy }) => (
-							<InputContainer>
+							<InputContainer key={stateKey}>
 								<InputLabel>{label}</InputLabel>
 								<TextInput
 									value={this.state[stateKey]}

@@ -135,7 +135,7 @@ export default class CurrenciesTimeline extends Component {
 						/>
 						{isButtonsEnabled && (
 							<>
-								<Button dataCy="update-btn" onClick={this.handleChartChangeModalOpen}>
+								<Button dataCy="update-btn" onClick={this.handleChartChangeModalToggle}>
 									Update
 								</Button>
 								<Button dataCy="randomize-btn" onClick={this.handleRandomize}>Randomize</Button>
