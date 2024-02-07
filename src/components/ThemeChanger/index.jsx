@@ -7,19 +7,17 @@ import { readFromCache, writeToCache } from '@helpers/cache';
 import { dark, light } from '@theme/theme';
 
 const ThemeChanger = ({ children }) => {
-	const [theme, setTheme] = useState(dark);
-
-	useEffect(() => {
+	const [themeType, setThemeType] = useState(() => {
 		const cachedTheme = readFromCache('theme');
 		if (cachedTheme) {
-			const newTheme = cachedTheme === 'dark' ? dark : light;
-			setTheme(newTheme);
+			return cachedTheme === 'dark' ? dark : light;
 		} else {
 			writeToCache('theme', 'dark');
+			return dark;
 		}
-	}, []);
+	});
 
-	return <ThemeProvider theme={{ theme, setTheme }}>{children}</ThemeProvider>;
+	return <ThemeProvider theme={{ themeType, setThemeType }}>{children}</ThemeProvider>;
 };
 
 ThemeChanger.propTypes = {

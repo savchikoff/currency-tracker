@@ -89,16 +89,10 @@ export default class CurrenciesTimeline extends Component {
 		observable.notify();
 	}
 
-	handleChartChangeModalOpen = () => {
-		this.setState({
-			isOpen: true,
-		});
-	};
-
-	handleChartChangeModalClose = () => {
-		this.setState({
-			isOpen: false,
-		});
+	handleChartChangeModalToggle = () => {
+		this.setState((prevState) => ({
+			isOpen: !prevState.isOpen,
+		}));
 	};
 
 	handleStartDateChange = (date) => {
@@ -157,7 +151,7 @@ export default class CurrenciesTimeline extends Component {
 				<ChartChangeModal
 					dataCy="chart-modal"
 					isOpen={this.state.isOpen}
-					close={this.handleChartChangeModalClose}
+					close={this.handleChartChangeModalToggle}
 					data={this.state.chartData}
 					handleDataChange={this.handleDataChange}
 				/>

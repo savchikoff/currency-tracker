@@ -1,4 +1,4 @@
-import CURRENCY_DATA from '../components/Currencies/mockData';
+import CURRENCY_DATA from '../components/Currencies/config';
 import CACHE_LIFETIIME from '../constants/cache';
 
 const readFromCache = (key) => {
@@ -20,4 +20,4 @@ const isCacheValid = (data) => {
     return !isValid;
 };
 
-export { isCacheValid,readFromCache, writeToCache };
+export { isCacheValid, readFromCache, writeToCache };

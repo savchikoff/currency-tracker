@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const s1 = ({ theme }) => theme.theme.sizes.s1;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const vibrantGreenColor = ({ theme }) => theme.theme.colors.vibrantGreen;
-const whiteColor = ({ theme }) => theme.theme.colors.white;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const s1 = ({ theme }) => theme.themeType.sizes.s1;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const vibrantGreenColor = ({ theme }) => theme.themeType.colors.vibrantGreen;
+const whiteColor = ({ theme }) => theme.themeType.colors.white;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 
 const ButtonComponent = styled.button`

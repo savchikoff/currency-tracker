@@ -1,4 +1,4 @@
-import { getRandomFloat, randomizeData, randomizeDataWithCurrency } from "../src/utils/randomizer";
+import { getRandomFloat, randomizeData, randomizeDataWithCurrency } from "./randomizer";
 
 describe('getRandomFloat', () => {
     it('should generate a random float within the specified range', () => {

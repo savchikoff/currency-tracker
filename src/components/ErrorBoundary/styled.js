@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const redGradient = ({ theme }) => theme.theme.colors.redGradient;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const redGradient = ({ theme }) => theme.themeType.colors.redGradient;
 
 export const ErrorContainer = styled.div`
 	display: flex;

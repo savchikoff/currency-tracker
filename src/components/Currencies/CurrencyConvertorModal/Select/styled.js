@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s1 = ({ theme }) => theme.theme.sizes.s1;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const gravelColor = ({ theme }) => theme.theme.colors.gravel;
-const dropDownBg = ({ theme }) => theme.theme.themeColors.modalBg;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s1 = ({ theme }) => theme.themeType.sizes.s1;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const gravelColor = ({ theme }) => theme.themeType.colors.gravel;
+const dropDownBg = ({ theme }) => theme.themeType.themeColors.modalBg;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 export const Main = styled.div`
 	font-family: inherit;

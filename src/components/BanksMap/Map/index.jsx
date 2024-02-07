@@ -2,7 +2,7 @@ import { PureComponent, createRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 
 import MapContainer from './styled';
-import { MAP_TOKEN, MAP_INITIAL_STATE, MAP_STYLE } from './config';
+import { MAP_INITIAL_STATE, MAP_STYLE } from './config';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;

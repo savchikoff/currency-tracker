@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
-const s56 = ({ theme }) => theme.theme.sizes.s56;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
-const gravelColor = ({ theme }) => theme.theme.colors.gravel;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s48 = ({ theme }) => theme.themeType.sizes.s48;
+const s56 = ({ theme }) => theme.themeType.sizes.s56;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
+const gravelColor = ({ theme }) => theme.themeType.colors.gravel;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
 
 export const CurrencySectionContainer = styled.div`
 	display: flex;

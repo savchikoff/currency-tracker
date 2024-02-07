@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, memo } from 'react';
 import ReactDOM from 'react-dom';
 
 import PropTypes from 'prop-types';
@@ -15,7 +15,7 @@ import closeIcon from '@assets/icons/close.svg';
 
 const portalRoot = document.getElementById('portal-root');
 
-const Modal = ({ isOpen, close, children, dataCy }) => {
+const Modal = memo(({ isOpen, close, children, dataCy }) => {
 	const ref = useRef();
 
 	useEffect(() => {
@@ -51,7 +51,7 @@ const Modal = ({ isOpen, close, children, dataCy }) => {
 		</>,
 		portalRoot
 	);
-};
+});
 
 Modal.propTypes = {
 	isOpen: PropTypes.bool.isRequired,

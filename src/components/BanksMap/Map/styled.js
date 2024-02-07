@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 const MapContainer = styled.div`
 	height: 400px;

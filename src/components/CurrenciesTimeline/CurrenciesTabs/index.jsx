@@ -24,8 +24,7 @@ export default class CurrenciesTabs extends PureComponent {
 	render() {
 		return (
 			<ButtonGroup>
-				{QUOTES_DATA.map((currency) => {
-					const { id, img } = currency;
+				{QUOTES_DATA.map(({ id, img }) => {
 					return (
 						<Tab
 							key={id}

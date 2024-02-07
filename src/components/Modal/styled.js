@@ -1,15 +1,15 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s2 = ({ theme }) => theme.theme.sizes.s1;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const modalBgColor = ({ theme }) => theme.theme.themeColors.modalBg;
-const modalBorderColor = ({ theme }) => theme.theme.themeColors.modalBorder;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s2 = ({ theme }) => theme.themeType.sizes.s1;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const modalBgColor = ({ theme }) => theme.themeType.themeColors.modalBg;
+const modalBorderColor = ({ theme }) => theme.themeType.themeColors.modalBorder;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
 
 export const Background = styled.div`
 	display: flex;
@@ -43,6 +43,7 @@ export const Wrapper = styled.div`
 `;
 
 export const HeaderRow = styled.div`
+	cursor: pointer;
 	position: absolute;
 	top: ${s12};
 	right: ${s12};

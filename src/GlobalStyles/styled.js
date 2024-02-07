@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const themeBgColor = ({ theme }) => theme.theme.themeColors.background;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const themeBgColor = ({ theme }) => theme.themeType.themeColors.background;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
 
 const GlobalStyle = createGlobalStyle`
   body {

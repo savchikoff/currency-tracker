@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s1 = ({ theme }) => theme.theme.sizes.s1;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s4 = ({ theme }) => theme.theme.sizes.s4;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const fontNormal = ({ theme }) => theme.theme.fontWeights.normal;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const gravelColor = ({ theme }) => theme.theme.colors.gravel;
-const monsoonColor = ({ theme }) => theme.theme.colors.monsoon;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s1 = ({ theme }) => theme.themeType.sizes.s1;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s4 = ({ theme }) => theme.themeType.sizes.s4;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const fontNormal = ({ theme }) => theme.themeType.fontWeights.normal;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const gravelColor = ({ theme }) => theme.themeType.colors.gravel;
+const monsoonColor = ({ theme }) => theme.themeType.colors.monsoon;
+const mintGreenColor = ({ theme }) => theme.themeType.colors.mintGreen;
 
 export const Chevron = styled.div`
 	border-style: solid;

@@ -1,16 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const themeBgColor = ({ theme }) => theme.theme.themeColors.background;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
+const mintGreenColor = ({ theme }) => theme.themeType.colors.mintGreen;
+const themeBgColor = ({ theme }) => theme.themeType.themeColors.background;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
 
 const slideIn = keyframes`
   from {

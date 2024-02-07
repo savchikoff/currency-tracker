@@ -1,5 +1,5 @@
-import CURRENCY_DATA from "../src/components/Currencies/mockData";
-import convertCurrency from "../src/helpers/convertor";
+import CURRENCY_DATA from "../components/Currencies/config";
+import convertCurrency from "./convertor";
 
 describe('convertCurrency', () => {
     it('should convert currency correctly for a valid values', () => {

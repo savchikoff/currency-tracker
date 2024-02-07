@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
-const blackColor = ({ theme }) => theme.theme.colors.black;
-const coralRedColor = ({ theme }) => theme.theme.colors.coralRed;
-const gravelColor = ({ theme }) => theme.theme.colors.gravel;
-const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
+const blackColor = ({ theme }) => theme.themeType.colors.black;
+const coralRedColor = ({ theme }) => theme.themeType.colors.coralRed;
+const gravelColor = ({ theme }) => theme.themeType.colors.gravel;
+const greenGradient = ({ theme }) => theme.themeType.colors.greenGradient;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 export const ModalContainer = styled.div``;
 

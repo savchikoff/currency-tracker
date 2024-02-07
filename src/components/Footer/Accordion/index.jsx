@@ -18,7 +18,7 @@ const Accordion = ({ columnName, links }) => {
 	const contentHeight = isExpanded ? contentRef.current.scrollHeight : 0;
 
 	const handleExpandToggle = () => {
-		setExpand(!isExpanded);
+		setExpand(prevState => !prevState);
 	};
 
 	return (

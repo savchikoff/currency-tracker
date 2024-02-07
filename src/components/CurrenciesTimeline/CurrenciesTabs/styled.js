@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s4 = ({ theme }) => theme.theme.sizes.s4;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const whiteColor = ({ theme }) => theme.theme.colors.white;
-const tabBg = ({ theme }) => theme.theme.themeColors.cardBg;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s4 = ({ theme }) => theme.themeType.sizes.s4;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const whiteColor = ({ theme }) => theme.themeType.colors.white;
+const tabBg = ({ theme }) => theme.themeType.themeColors.cardBg;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
 
 export const Tab = styled.button`
 	font-family: inherit;

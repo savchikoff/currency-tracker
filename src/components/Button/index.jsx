@@ -1,13 +1,14 @@
+import { memo } from 'react';
 import ButtonComponent from './styled';
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick, children, dataCy }) => {
+const Button = memo(({ onClick, children, dataCy }) => {
 	return (
 		<ButtonComponent data-cy={dataCy} onClick={onClick}>
 			{children}
 		</ButtonComponent>
 	);
-};
+});
 
 Button.propTypes = {
 	onClick: PropTypes.func,

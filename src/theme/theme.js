@@ -3,7 +3,7 @@ import {
 	colors,
 	fontWeights,
 	sizes
-} from '../constants/styles';
+} from './styles';
 
 export const baseStyles = {
 	colors: {

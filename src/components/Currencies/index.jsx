@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 import CurrencySection from './CurrencySection';
 import CurrenciesContainer from './styled';
@@ -31,15 +31,15 @@ const Currencies = () => {
 		getCurrenciesRates();
 	}, []);
 
-	const handleConvertorModalOpen = (id, img) => {
-		setModalOpen(true);
+	const handleConvertorModalOpen = useCallback((id, img) => {
+		setModalOpen(prevState => !prevState);
 		setChosenCurrency({ id, img });
 		setAmount("");
-	};
+	}, []);
 
-	const handleConvertorModalClose = () => {
-		setModalOpen(false);
-	};
+	const handleConvertorModalClose = useCallback(() => {
+		setModalOpen(prevState => !prevState);
+	}, []);
 
 	return (
 		<>

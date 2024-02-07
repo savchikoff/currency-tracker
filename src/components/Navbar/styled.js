@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s80 = ({ theme }) => theme.theme.sizes.s80;
-const s96 = ({ theme }) => theme.theme.sizes.s96;
-const s112 = ({ theme }) => theme.theme.sizes.s112;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s80 = ({ theme }) => theme.themeType.sizes.s80;
+const s96 = ({ theme }) => theme.themeType.sizes.s96;
+const s112 = ({ theme }) => theme.themeType.sizes.s112;
+const mintGreenColor = ({ theme }) => theme.themeType.colors.mintGreen;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
 
 export const NavbarContainer = styled.nav`
 	display: flex;

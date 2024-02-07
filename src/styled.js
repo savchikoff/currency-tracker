@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
 
 const Container = styled.div`
 	margin: ${s0} auto;

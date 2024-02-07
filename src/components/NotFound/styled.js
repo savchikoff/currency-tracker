@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s72 = ({ theme }) => theme.theme.sizes.s72;
-const s152 = ({ theme }) => theme.theme.sizes.s152;
-const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s72 = ({ theme }) => theme.themeType.sizes.s72;
+const s152 = ({ theme }) => theme.themeType.sizes.s152;
+const greenGradient = ({ theme }) => theme.themeType.colors.greenGradient;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 export const NotFoundContainer = styled.div`
 	display: flex;

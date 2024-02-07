@@ -1,26 +1,26 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s18 = ({ theme }) => theme.theme.sizes.s18;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s28 = ({ theme }) => theme.theme.sizes.s18;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s40 = ({ theme }) => theme.theme.sizes.s40;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
-const s56 = ({ theme }) => theme.theme.sizes.s56;
-const s64 = ({ theme }) => theme.theme.sizes.s64;
-const s128 = ({ theme }) => theme.theme.sizes.s128;
-const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
-const fontSemiBold = ({ theme }) => theme.theme.fontWeights.semiBold;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
-const xLargeScreen = ({ theme }) => theme.theme.breakpoints.xLarge;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s18 = ({ theme }) => theme.themeType.sizes.s18;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s28 = ({ theme }) => theme.themeType.sizes.s18;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s40 = ({ theme }) => theme.themeType.sizes.s40;
+const s48 = ({ theme }) => theme.themeType.sizes.s48;
+const s56 = ({ theme }) => theme.themeType.sizes.s56;
+const s64 = ({ theme }) => theme.themeType.sizes.s64;
+const s128 = ({ theme }) => theme.themeType.sizes.s128;
+const greenGradient = ({ theme }) => theme.themeType.colors.greenGradient;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
+const fontSemiBold = ({ theme }) => theme.themeType.fontWeights.semiBold;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
+const xLargeScreen = ({ theme }) => theme.themeType.breakpoints.xLarge;
 
 export const FooterContainer = styled.footer`
 	display: flex;

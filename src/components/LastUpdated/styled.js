@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s2 = ({ theme }) => theme.theme.sizes.s2;
-const s4 = ({ theme }) => theme.theme.sizes.s4;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
-const s64 = ({ theme }) => theme.theme.sizes.s64;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s2 = ({ theme }) => theme.themeType.sizes.s2;
+const s4 = ({ theme }) => theme.themeType.sizes.s4;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s48 = ({ theme }) => theme.themeType.sizes.s48;
+const s64 = ({ theme }) => theme.themeType.sizes.s64;
+const mintGreenColor = ({ theme }) => theme.themeType.colors.mintGreen;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
 
 export const LastUpdatedContainer = styled.div`
 	display: flex;

@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
-const s1 = ({ theme }) => theme.theme.sizes.s1;
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s28 = ({ theme }) => theme.theme.sizes.s28;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const fontNormal = ({ theme }) => theme.theme.fontWeights.normal;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.small;
-const xLargeScreen = ({ theme }) => theme.theme.breakpoints.xLarge;
-const colorWhite = ({ theme }) => theme.theme.colors.white;
-const cardBg = ({ theme }) => theme.theme.themeColors.cardBg;
-const gravelColor = ({ theme }) => theme.theme.colors.gravel;
+const s1 = ({ theme }) => theme.themeType.sizes.s1;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s28 = ({ theme }) => theme.themeType.sizes.s28;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const fontNormal = ({ theme }) => theme.themeType.fontWeights.normal;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const xLargeScreen = ({ theme }) => theme.themeType.breakpoints.xLarge;
+const colorWhite = ({ theme }) => theme.themeType.colors.white;
+const cardBg = ({ theme }) => theme.themeType.themeColors.cardBg;
+const gravelColor = ({ theme }) => theme.themeType.colors.gravel;
 
 export const CardContainer = styled.div`
 	color: ${colorWhite};

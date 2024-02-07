@@ -22,28 +22,26 @@ const CurrencySection = ({
 	}, [cards, currencies]);
 
 	return (
-		<>
-			<CurrencySectionContainer>
-				<CurrencySectionHeader>{header}</CurrencySectionHeader>
-				<CurrencySectionCards>
-					{cards.map(({ id, img, title }, index) => (
-						<CurrencyCard
-							key={title}
-							name={title}
-							img={img}
-							alt={title}
-							value={formattedCurrencyRates[index]}
-							dataCy={`currency-card-${id}`}
-							handleCardClick={
-								isClickable
-									? () => handleConvertorModalOpen(id, img)
-									: undefined
-							}
-						/>
-					))}
-				</CurrencySectionCards>
-			</CurrencySectionContainer>
-		</>
+		<CurrencySectionContainer>
+			<CurrencySectionHeader>{header}</CurrencySectionHeader>
+			<CurrencySectionCards>
+				{cards.map(({ id, img, title }, index) => (
+					<CurrencyCard
+						key={title}
+						name={title}
+						img={img}
+						alt={title}
+						value={formattedCurrencyRates[index]}
+						dataCy={`currency-card-${id}`}
+						handleCardClick={
+							isClickable
+								? () => handleConvertorModalOpen(id, img)
+								: undefined
+						}
+					/>
+				))}
+			</CurrencySectionCards>
+		</CurrencySectionContainer>
 	);
 };
 

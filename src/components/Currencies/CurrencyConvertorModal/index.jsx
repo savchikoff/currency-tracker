@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -44,7 +44,7 @@ const CurrencyConvertorModal = ({
 		setAmount(e.target.value);
 	};
 
-	const handleConvert = () => {
+	const handleConvert = useCallback(() => {
 		if (Number(amount) > 0) {
 			const convertedValue = convertCurrency(
 				currencies,
@@ -54,7 +54,7 @@ const CurrencyConvertorModal = ({
 			);
 			setConvertedAmount(Number(convertedValue));
 		}
-	};
+	}, [amount, currencies, chosenCurrencyName, targetCurrency]);
 
 	return (
 		<Modal isOpen={isOpen} close={close} dataCy="convertor-modal">

@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
-const s12 = ({ theme }) => theme.theme.sizes.s20;
-const s20 = ({ theme }) => theme.theme.sizes.s20;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
-const s56 = ({ theme }) => theme.theme.sizes.s56;
-const s64 = ({ theme }) => theme.theme.sizes.s64;
-const s72 = ({ theme }) => theme.theme.sizes.s72;
-const headerThemeGradientColor = ({ theme }) => theme.theme.themeColors.headerGradient;
-const greenGradient = ({ theme }) => theme.theme.colors.greenGradient;
-const whiteColor = ({ theme }) => theme.theme.colors.white;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
-const mediumScreen = ({ theme }) => theme.theme.breakpoints.medium;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
+const s12 = ({ theme }) => theme.themeType.sizes.s20;
+const s20 = ({ theme }) => theme.themeType.sizes.s20;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s48 = ({ theme }) => theme.themeType.sizes.s48;
+const s56 = ({ theme }) => theme.themeType.sizes.s56;
+const s64 = ({ theme }) => theme.themeType.sizes.s64;
+const s72 = ({ theme }) => theme.themeType.sizes.s72;
+const headerThemeGradientColor = ({ theme }) => theme.themeType.themeColors.headerGradient;
+const greenGradient = ({ theme }) => theme.themeType.colors.greenGradient;
+const whiteColor = ({ theme }) => theme.themeType.colors.white;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
+const mediumScreen = ({ theme }) => theme.themeType.breakpoints.medium;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
 
 export const HeaderContainer = styled.header`
 	padding-top: ${s32};

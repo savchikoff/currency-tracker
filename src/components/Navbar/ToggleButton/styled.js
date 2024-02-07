@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const s0 = ({ theme }) => theme.theme.sizes.s0;
-const s1 = ({ theme }) => theme.theme.sizes.s1;
-const s4 = ({ theme }) => theme.theme.sizes.s4;
-const s12 = ({ theme }) => theme.theme.sizes.s12;
-const s24 = ({ theme }) => theme.theme.sizes.s24;
-const blackColor = ({ theme }) => theme.theme.colors.black;
-const whiteColor = ({ theme }) => theme.theme.colors.white;
-const vibrantGreenColor = ({ theme }) => theme.theme.colors.vibrantGreen;
+const s0 = ({ theme }) => theme.themeType.sizes.s0;
+const s1 = ({ theme }) => theme.themeType.sizes.s1;
+const s4 = ({ theme }) => theme.themeType.sizes.s4;
+const s12 = ({ theme }) => theme.themeType.sizes.s12;
+const s24 = ({ theme }) => theme.themeType.sizes.s24;
+const blackColor = ({ theme }) => theme.themeType.colors.black;
+const whiteColor = ({ theme }) => theme.themeType.colors.white;
+const vibrantGreenColor = ({ theme }) => theme.themeType.colors.vibrantGreen;
 
 export const Label = styled.label`
 	display: flex;

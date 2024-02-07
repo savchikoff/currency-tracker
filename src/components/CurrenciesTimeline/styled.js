@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const s16 = ({ theme }) => theme.theme.sizes.s16;
-const s32 = ({ theme }) => theme.theme.sizes.s32;
-const s48 = ({ theme }) => theme.theme.sizes.s48;
-const s56 = ({ theme }) => theme.theme.sizes.s56;
-const smallScreen = ({ theme }) => theme.theme.breakpoints.small;
-const largeScreen = ({ theme }) => theme.theme.breakpoints.large;
+const s16 = ({ theme }) => theme.themeType.sizes.s16;
+const s32 = ({ theme }) => theme.themeType.sizes.s32;
+const s48 = ({ theme }) => theme.themeType.sizes.s48;
+const s56 = ({ theme }) => theme.themeType.sizes.s56;
+const smallScreen = ({ theme }) => theme.themeType.breakpoints.small;
+const largeScreen = ({ theme }) => theme.themeType.breakpoints.large;
 
 export const TimelineContainer = styled.div`
 	display: flex;

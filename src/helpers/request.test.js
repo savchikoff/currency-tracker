@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import CURRENCY_DATA from "../src/components/Currencies/mockData";
-import * as cacheModule from '../src/helpers/cache';
-import { getCachedData, getNewData } from '../src/helpers/request';
+import CURRENCY_DATA from "../components/Currencies/config";
+import * as cacheModule from './cache';
+import { getCachedData, getNewData } from './request';
 
 jest.mock('axios');
-jest.mock('../src/utils/cache');
+jest.mock('../helpers/cache');
 
 const { writeToCache, readFromCache } = cacheModule;
 

@@ -15,6 +15,8 @@ import {
 	ErrorLabel,
 } from './styled';
 
+import inputFields from './config';
+
 export default class ChartChangeModal extends Component {
 	constructor(props) {
 		super(props);
@@ -34,26 +36,9 @@ export default class ChartChangeModal extends Component {
 		}
 	}
 
-	handleOpenChange = (e) => {
-		this.setState({
-			open: e.target.value,
-		});
-	};
-	handleHighChange = (e) => {
-		this.setState({
-			high: e.target.value,
-		});
-	};
-	handleLowChange = (e) => {
-		this.setState({
-			low: e.target.value,
-		});
-	};
-	handleCloseChange = (e) => {
-		this.setState({
-			close: e.target.value,
-		});
-	};
+	handleInputChange = (e, field) => {
+		this.setState({ [field]: e.target.value });
+	}
 
 	handleSelectChange = (e) => {
 		this.setState({ selectedDate: Number(e.target.value) });
@@ -113,38 +98,16 @@ export default class ChartChangeModal extends Component {
 								})}
 							</SelectInput>
 						</InputContainer>
-						<InputContainer>
-							<InputLabel>High</InputLabel>
-							<TextInput
-								value={this.state.high}
-								onChange={this.handleHighChange}
-								data-cy="high-input"
-							/>
-						</InputContainer>
-						<InputContainer>
-							<InputLabel>Close</InputLabel>
-							<TextInput
-								value={this.state.close}
-								onChange={this.handleCloseChange}
-								data-cy="close-input"
-							/>
-						</InputContainer>
-						<InputContainer>
-							<InputLabel>Open</InputLabel>
-							<TextInput
-								value={this.state.open}
-								onChange={this.handleOpenChange}
-								data-cy="open-input"
-							/>
-						</InputContainer>
-						<InputContainer>
-							<InputLabel>Low</InputLabel>
-							<TextInput
-								value={this.state.low}
-								onChange={this.handleLowChange}
-								data-cy="low-input"
-							/>
-						</InputContainer>
+						{inputFields.map(({ label, stateKey, dataCy }) => (
+							<InputContainer>
+								<InputLabel>{label}</InputLabel>
+								<TextInput
+									value={this.state[stateKey]}
+									onChange={(e) => this.handleInputChange(e, stateKey)}
+									data-cy={dataCy}
+								/>
+							</InputContainer>
+						))}
 						<ErrorLabel>{this.state.error}</ErrorLabel>
 						<Button dataCy="chart-change-btn" onClick={this.handleDataChange}>Change chart</Button>
 					</ModalWrapper>

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const s24 = ({ theme }) => theme.theme.sizes.s28;
-const s28 = ({ theme }) => theme.theme.sizes.s28;
-const s40 = ({ theme }) => theme.theme.sizes.s40;
-const fontLight = ({ theme }) => theme.theme.fontWeights.light;
-const fontNormal = ({ theme }) => theme.theme.fontWeights.normal;
-const themeTextColor = ({ theme }) => theme.theme.themeColors.text;
-const mintGreenColor = ({ theme }) => theme.theme.colors.mintGreen;
-const monsoonColor = ({ theme }) => theme.theme.colors.monsoon;
+const s24 = ({ theme }) => theme.themeType.sizes.s28;
+const s28 = ({ theme }) => theme.themeType.sizes.s28;
+const s40 = ({ theme }) => theme.themeType.sizes.s40;
+const fontLight = ({ theme }) => theme.themeType.fontWeights.light;
+const fontNormal = ({ theme }) => theme.themeType.fontWeights.normal;
+const themeTextColor = ({ theme }) => theme.themeType.themeColors.text;
+const mintGreenColor = ({ theme }) => theme.themeType.colors.mintGreen;
+const monsoonColor = ({ theme }) => theme.themeType.colors.monsoon;
 
 export const LinksColumn = styled.div`
 	display: flex;

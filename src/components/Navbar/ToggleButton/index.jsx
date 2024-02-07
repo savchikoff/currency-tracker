@@ -6,15 +6,15 @@ import { dark, light } from '@theme/theme';
 import { writeToCache } from '@helpers/cache';
 
 const ToggleButton = () => {
-	const { theme, setTheme } = useContext(ThemeContext);
+	const { themeType, setThemeType } = useContext(ThemeContext);
 
 	const toggleTheme = () => {
-		const newTheme = theme.name === 'dark' ? light : dark;
-		setTheme(newTheme);
+		const newTheme = themeType.name === 'dark' ? light : dark;
+		setThemeType(newTheme);
 		writeToCache('theme', newTheme.name);
 	};
 
-	const isLightTheme = theme.name === 'light';
+	const isLightTheme = themeType.name === 'light';
 
 	return (
 		<Label>

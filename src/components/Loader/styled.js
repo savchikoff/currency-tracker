@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const s8 = ({ theme }) => theme.theme.sizes.s8;
-const vibrantGreenColor = ({ theme }) => theme.theme.colors.vibrantGreen;
+const s8 = ({ theme }) => theme.themeType.sizes.s8;
+const vibrantGreenColor = ({ theme }) => theme.themeType.colors.vibrantGreen;
 
 export const LoaderContainer = styled.div`
 	display: flex;
