@@ -16,8 +16,8 @@ const CurrencySection = ({
 	isClickable,
 }) => {
 	const formattedCurrencyRates = useMemo(() => {
-		return cards.map(({ id, value }) =>
-			formatCurrencies(currencies, id, value)
+		return cards.map(({ id }) =>
+			formatCurrencies(currencies, id)
 		);
 	}, [cards, currencies]);
 
@@ -49,7 +49,7 @@ const CurrencySection = ({
 
 CurrencySection.propTypes = {
 	header: PropTypes.string.isRequired,
-	cards: PropTypes.array.isRequired,
+	cards: PropTypes.array,
 	currencies: PropTypes.object,
 	handleConvertorModalOpen: PropTypes.func,
 	isClickable: PropTypes.bool.isRequired,

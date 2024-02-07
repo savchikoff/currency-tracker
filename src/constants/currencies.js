@@ -13,13 +13,11 @@ import libra from '../assets/icons/LIBRA.svg';
 export const STOCKS_DATA = [
     {
         title: 'Bovespa Index',
-        img: bovespa,
-        value: '0.15%',
+        img: bovespa
     },
     {
         title: 'IFIX',
-        img: ifix,
-        value: '0.15%',
+        img: ifix
     },
 ];
 
