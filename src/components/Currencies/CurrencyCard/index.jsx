@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import {
 	CardContainer,
@@ -8,7 +9,7 @@ import {
 	CardValue,
 } from './styled';
 
-const CurrencyCard = ({ name, img, alt, value, handleCardClick, dataCy }) => {
+const CurrencyCard = memo(({ name, img, alt, value, handleCardClick, dataCy }) => {
 	return (
 		<CardContainer data-cy={dataCy} onClick={handleCardClick}>
 			<CardWrapper>
@@ -20,7 +21,7 @@ const CurrencyCard = ({ name, img, alt, value, handleCardClick, dataCy }) => {
 			</CardWrapper>
 		</CardContainer>
 	);
-};
+});
 
 CurrencyCard.propTypes = {
 	name: PropTypes.string.isRequired,

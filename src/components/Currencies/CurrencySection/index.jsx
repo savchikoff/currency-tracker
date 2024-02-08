@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import {
 	CurrencySectionCards,
@@ -21,6 +21,11 @@ const CurrencySection = ({
 		);
 	}, [cards, currencies]);
 
+	const handleModalOpen = useCallback((id, img) => () => {
+		handleConvertorModalOpen(id, img)
+	}, [handleConvertorModalOpen]);
+
+
 	return (
 		<CurrencySectionContainer>
 			<CurrencySectionHeader>{header}</CurrencySectionHeader>
@@ -35,7 +40,7 @@ const CurrencySection = ({
 						dataCy={`currency-card-${id}`}
 						handleCardClick={
 							isClickable
-								? () => handleConvertorModalOpen(id, img)
+								? handleModalOpen(id, img)
 								: undefined
 						}
 					/>

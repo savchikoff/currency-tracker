@@ -77,8 +77,9 @@ export default class ChartChangeModal extends Component {
 	};
 
 	render() {
+		const { close, dataCy, isOpen } = this.props;
 		return (
-			<Modal dataCy={this.props.dataCy} isOpen={this.props.isOpen} close={this.props.close}>
+			<Modal dataCy={dataCy} isOpen={isOpen} close={close}>
 				<ModalContainer>
 					<ModalWrapper>
 						<InputContainer>

@@ -67,6 +67,7 @@ export const ResultList = styled.ul`
 `;
 
 export const ResultItem = styled.li`
+	cursor: pointer;
 	font-size: ${s16};
 	padding: ${s16} ${s32};
 	border: ${s1} solid ${gravelColor};
