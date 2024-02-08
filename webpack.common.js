@@ -21,7 +21,8 @@ module.exports = {
 			'@hooks': path.resolve(__dirname, 'src/hooks'),
 			'@styled': path.resolve(__dirname, 'src/styled'),
 			'@GlobalStyles': path.resolve(__dirname, 'src/GlobalStyles'),
-			'@theme': path.resolve(__dirname, 'src/theme')
+			'@theme': path.resolve(__dirname, 'src/theme'),
+			'@api': path.resolve(__dirname, 'src/api')
 		},
 	},
 	module: {

@@ -1,5 +1,5 @@
 import { LastUpdatedContainer, LastUpdatedInfo, BlinkingDot } from './styled';
-import { getCachedData } from '@helpers/request';
+import { getCachedData } from '@api/request';
 import formatDate from '@helpers/formatDate';
 
 const LastUpdated = () => {
