@@ -1,4 +1,4 @@
-# Tестовое задание приложение Modsen Currency Tracker
+# Tестовое задание приложение Currency Tracker
 
 ## Содержание
 
